@@ -18,9 +18,9 @@ import java.util.ArrayList;
  * @author Lenovo
  */
 public class MyConnector {
-    private static final String dbname = "tsm_infocentre";
-    private static final String username = "root";
-    private static final String password = "qwerty";
+    private static  String dbname = "tsm_infocentre";
+    private static  String username = "root";
+    private static  String password = "qwerty";
     
     public Connection conn;
     

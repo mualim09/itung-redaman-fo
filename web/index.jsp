@@ -15,7 +15,7 @@
     }
     
     //String query="insert INTO adm_user(nik, name, password, created_date) values ('940146', 'Firman Aden', 'Monyet23', now());";
-    String query="Select * from adm_user;;";
+    String query="Select * from adm_user;";
     /*if(!myCon.executeQuery(query)){
         out.print("Query fail!");
         return;
