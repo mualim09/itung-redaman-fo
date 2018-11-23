@@ -43,7 +43,7 @@
                     <!-- /.row -->
                     <div class="row">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-condensed">
+                            <table id="myTable" class="table table-bordered table-striped table-condensed display responsive nowrap" style="width: 100%">
                                 <thead>
                                     <tr>
                                         <th>NIK</th>
@@ -89,9 +89,23 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="../dist/js/sb-admin-2.js"></script>
+        <!--<script src="../assets/DataTables-1.10.18/js/dataTables.bootstrap.min.js"></script>-->
+        <script src="../assets/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/Responsive-2.2.2/js/dataTables.responsive.min.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/dataTables.buttons.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/buttons.colVis.min.js"></script>
+        <!--<script src="../assets/DataTables-1.10.18/js/dataTables.jqueryui.min.js"></script>-->
+
 
         <script>
-
+            $(function () {
+                $("#myTable").DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'colvis'
+                    ]
+                });
+            });
         </script>
 
     </body>
