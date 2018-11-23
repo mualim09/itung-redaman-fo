@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 23, 2018, 12:03:58 PM
+    Author     : Lenovo
+*/
+
+.sidebar a{
+    color: white !important;
+    background-color: red !important;
+}
+
+.sidebar a:hover{
+    color: red !important;
+    background-color: white !important;
+}
+
+div.sidebar{
+    background-color: red ;
+}
+
+#wrapper.in {
+    background-color: red;
+}

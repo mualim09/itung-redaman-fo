@@ -27,7 +27,8 @@
         <link rel="stylesheet" href="../assets/theme/css/style.css">
         <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
         <link rel="stylesheet" href="../assets/css/all.min.css" type="text/css">
-        
+        <link href="../assets/css/loader.css" rel="stylesheet">
+
         <script src="../assets/js/all.min.js"></script>
 
 
@@ -61,7 +62,6 @@
 
                     <div class="navbar-buttons mbr-section-btn">
                         <a class="btn btn-sm btn-secondary-outline display-4" href="#" data-toggle="modal" data-target="#modalLogin"><span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>Login</a> 
-                        <a id="btnSignUp" class="btn btn-sm btn-secondary display-4" href="#"><span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>Sign Up</a></div>
                 </div>
             </nav>
         </section>
@@ -84,11 +84,7 @@
         </section>
 
         <section class="features11 cid-r99Dy226Qt" id="features11-8">
-
-
-
-
-
+         
             <div class="container">   
                 <div class="col-md-12">
                     <div class="media-container-row">
@@ -139,7 +135,8 @@
                         </div>
                     </div>
                 </div> 
-            </div>          
+            </div> 
+            
         </section>
 
         <section class="cid-r9aood31eD mbr-reveal" id="footer1-4">
@@ -275,7 +272,6 @@
             </div>
         </div>
 
-
         <script src="../assets/web/assets/jquery/jquery.min.js"></script>
         <script src="../assets/popper/popper.min.js"></script>
         <script src="../assets/tether/tether.min.js"></script>
@@ -285,14 +281,12 @@
         <script src="../assets/touchswipe/jquery.touch-swipe.min.js"></script>
         <script src="../assets/theme/js/script.js"></script>
         <script src="../assets/js/bootbox.min.js"></script>
+        <script src="../assets/js/rd.loading.js"></script>
 
         <script>
             $(function () {
-                
-                $("#btnSignUp").on("click", function(){
-                    $("#modalLogin").modal("show");
-                });
-                
+
+               
                 $('#btnLogin').on('click', function (e) {
                     e.preventDefault();
                     var $form = $('#formLogin');
@@ -332,7 +326,7 @@
                         }
 
                     });
-                    
+
                 });
 
             });
