@@ -36,7 +36,7 @@
                             <h1 class="page-header">Manage User</h1>                        
                         </div>
                         <h4 class="pull-right">
-                            <button class="btn btn-success"><i class="fa fa-plus-circle"></i> Add User</button>
+                            <button id="btnAddModal" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add User</button>
                         </h4>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -78,6 +78,28 @@
         </div>
         <!-- /#wrapper -->
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
         <!-- jQuery -->
         <script src="../vendor/jquery/jquery.min.js"></script>
 
@@ -88,14 +110,13 @@
         <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="../dist/js/sb-admin-2.js"></script>
-        <!--<script src="../assets/DataTables-1.10.18/js/dataTables.bootstrap.min.js"></script>-->
-        <script src="../assets/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
-        <script src="../assets/Responsive-2.2.2/js/dataTables.responsive.min.js"></script>
+
+        <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+        <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
         <script src="../assets/Buttons-1.5.4/js/dataTables.buttons.js"></script>
         <script src="../assets/Buttons-1.5.4/js/buttons.colVis.min.js"></script>
-        <!--<script src="../assets/DataTables-1.10.18/js/dataTables.jqueryui.min.js"></script>-->
-
+        <script src="../dist/js/sb-admin-2.js"></script>
 
         <script>
             $(function () {
@@ -105,7 +126,11 @@
                         'colvis'
                     ]
                 });
-            });
+                
+                $('#btnAddModal').on('click', function(){
+                    $("#myModal").modal('show');
+                });
+            });// end function ready
         </script>
 
     </body>

@@ -18,11 +18,9 @@
 <!-- Custom Fonts -->
 <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/infoCentre.css" rel="stylesheet" type="text/css">
-<link href="../assets/DataTables-1.10.18/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="../assets/DataTables-1.10.18/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
-<link href="../assets/Responsive-2.2.2/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css">
+<link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+<link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" type="text/css">
 <link href="../assets/Buttons-1.5.4/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
-<!--<link href="../assets/DataTables-1.10.18/css/dataTables.jqueryui.min.css" rel="stylesheet" type="text/css">-->
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
