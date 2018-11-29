@@ -22,7 +22,7 @@
             <th>Name</th>
             <th>Phone</th>
             <th>Email</th>
-            <th>Action</th>
+            <th class="not-export">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -53,10 +53,32 @@
 </table>
 
 <script>
+    var exportTitle = 'Exisitng User Of STO Tasikmalaya InfoCentre';
     $("#myTable").DataTable({
         dom: 'Bfrtip',
         buttons: [
-            'colvis'
+            'colvis',
+            {
+                extend: 'excel',
+                title: exportTitle,
+                exportOptions:{
+                    columns: ':visible :not(.not-export)'
+                }
+            },
+            {
+                extend: 'csv',
+                title: exportTitle,
+                exportOptions:{
+                    columns: ':visible :not(.not-export)'
+                }
+            },            
+            {
+                extend: 'print',
+                title: exportTitle,
+                exportOptions:{
+                    columns: ':visible :not(.not-export)'
+                }
+            }            
         ]
     });
 </script>
