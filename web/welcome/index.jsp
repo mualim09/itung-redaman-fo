@@ -30,6 +30,9 @@
         <link href="../assets/css/loader.css" rel="stylesheet">
 
         <script src="../assets/js/all.min.js"></script>
+        <script>
+            window.history.forward();
+        </script>
 
 
 
@@ -312,13 +315,13 @@
                         success: function (data, textStatus, jqXHR) {
                             console.log(data);
                             if (data.isValid) {
-                                window.location.replace("index.jsp");
+                                window.location.replace(data.msg);
                             } else {
-                                bootbox.alert(data.msg);
+                                alert(data.msg);
                             }
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
-                            bootbox.alert("Ops! Something went wrong. Try again later!");
+                            alert("Ops! Something went wrong. Try again later!");
                             console.log(errorThrown);
                         },
                         complete: function (jqXHR, textStatus) {

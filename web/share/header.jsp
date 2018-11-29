@@ -4,6 +4,7 @@
     Author     : Lenovo
 --%>
 
+<%@page import="helper.SessionChecker"%>
 <title>InfoCentre</title>
 <link rel="shortcut icon" href="../assets/images/telkom-indonesia-logo-logotype-128x70.png" type="image/x-icon">
 <!-- Bootstrap Core CSS -->
@@ -28,3 +29,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<script>
+    window.history.forward();
+</script>
+<%
+    SessionChecker.isSessionValid(request, response);
+%>

@@ -158,5 +158,10 @@ public class MyConnector {
         return records;
     
     }
+    
+    public void activitLog(String nik, String tabel, String activity){
+        String query="INSERT INTO activity_log(nik,waktu,tabel,activity) VALUES('"+nik+"', now(), '"+tabel+"', '"+activity+"' );";
+        executeQuery(query);
+    }
 
 }

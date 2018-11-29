@@ -10,39 +10,10 @@
 <%
     MyConnector myCon = new MyConnector();
     if (!myCon.createConnection()) {
-        out.print("Failed to connect");
+        out.print("<h1 class='text-danger'>Failed to connect! Try again later...</h1>");
         return;
     }
     
-    //String query="insert INTO adm_user(nik, name, password, created_date) values ('940146', 'Firman Aden', 'Monyet23', now());";
-    String query="Select * from adm_user;";
-    /*if(!myCon.executeQuery(query)){
-        out.print("Query fail!");
-        return;
-    }
-    */
-    
-    ArrayList<ArrayList<String>> arrData = myCon.getData(query);
-    
-    for(ArrayList<String> row : arrData){
-        String line = "";
-        for(String col : row){
-            line+=col+"  ";
-        }
-        
-        out.print(line + "<br>");
-    }
-    
-    myCon.closeConnection();
+    response.sendRedirect("welcome");
 
 %>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>

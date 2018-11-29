@@ -3,21 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/loader.html</file>
+            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/index.jsp</file>
+            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/welcome/logout.jsp</file>
+            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/src/java/dbcon/MyConnector.java</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/share/navigation-right.jsp</file>
+            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/src/java/helper/BasicJson.java</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/assets/bootstrap/css/bootstrap.min.css</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/assets/DataTables-1.10.18/js/dataTables.buttons.min.js</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/vendor/datatables-responsive/dataTables.responsive.js</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/assets/css/loader.css</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/manage_user/index.jsp</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/welcome/login_process.jsp</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/share/header.jsp</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/dist/css/sb-admin-2.css</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/index.jsp</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/src/java/dbcon/MyConnector.java</file>
+            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/src/java/helper/MySession.java</file>
             <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/welcome/index.jsp</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/assets/js/rd.loading.js</file>
-            <file>file:/C:/Users/Lenovo/Documents/NetBeansProjects/STO_InfoCentre/web/assets/css/infoCentre.css</file>
         </group>
     </open-files>
 </project-private>
