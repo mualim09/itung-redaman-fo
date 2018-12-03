@@ -75,6 +75,9 @@
             {
                 extend: 'print',
                 title: exportTitle,
+                customize: function(win){
+                    $(win.document.body).append('<div style="text-align: right;padding-top:10px;"><br>Total Number of Users : <%=arrData.size()%> </div>');
+                },
                 exportOptions:{
                     columns: ':visible :not(.not-export)'
                 }

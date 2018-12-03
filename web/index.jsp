@@ -14,6 +14,7 @@
         return;
     }
     
+    myCon.closeConnection();
     response.sendRedirect("welcome");
 
 %>

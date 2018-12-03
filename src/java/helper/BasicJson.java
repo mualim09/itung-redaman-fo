@@ -12,21 +12,21 @@ import org.json.JSONObject;
  * @author Lenovo
  */
 public class BasicJson {
-    public BasicJson(){
-    
+
+    public BasicJson() {
+        
     }
-    
-    public JSONObject getBasicJson(boolean isValid, String msg){
+
+    public JSONObject getBasicJson(boolean isValid, String msg) {
         JSONObject json = new JSONObject();
         json.put("isValid", isValid);
-        
-        if(isValid){
+
+        if (isValid) {
             json.put("msg", msg);
+        } else {
+            json.put("msg", "<b style='color:red'>" + msg + "</b>");
         }
-        else{
-            json.put("msg", "<b style='color:red'>"+msg+"</b>" );
-        }
-        
-        return json;    
+
+        return json;
     }
 }
