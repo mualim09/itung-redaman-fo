@@ -63,43 +63,47 @@
         </tr>
         <tr>
             <th>DEG(KVA)</th>
-            <th>TANGKI BBM(Liter)</th>
-            <th>SOLAR</th>
-            <th>OLI</th>
+            <th>TANGKI BBM (Liter)</th>
+            <th>SOLAR (Liter)</th>
+            <th>OLI (Liter)</th>
             <th>BULAN LALU</th>
             <th>BULAN INI</th>
             <th>JML JAM JALAN</th>
-            <th>SOLAR</th>
-            <th>OLI</th>
-            <th>SOLAR</th>
-            <th>OLI</th>
-            <th>SOLAR</th>
-            <th>OLI</th>
+            <th>SOLAR (Liter)</th>
+            <th>OLI (Liter)</th>
+            <th>SOLAR (Liter)</th>
+            <th>OLI (Liter)</th>
+            <th>SOLAR (Liter)</th>
+            <th>OLI (Liter)</th>
         </tr>
     </thead>
     <tbody>
         <%            int noList = 0;
             for (ArrayList<String> arr : arrDataD) {
                 noList++;
+                String kelas="";
+                if(Double.parseDouble(arr.get(14)) < 4.0){
+                    kelas="danger";
+                }
         %>
         <tr>
             <td><%=noList%></td>
-            <td><%=arr.get(0)%></td>
-            <td><%=arr.get(1)%></td>
-            <td><%=arr.get(2)%></td>
-            <td><%=arr.get(3)%></td>
-            <td><%=arr.get(4)%></td>
-            <td><%=arr.get(5)%></td>
-            <td><%=arr.get(6)%></td>
-            <td><%=arr.get(7)%></td>
-            <td><%=arr.get(8)%></td>
-            <td><%=arr.get(9)%></td>
-            <td><%=arr.get(10)%></td>
-            <td><%=arr.get(11)%></td>
-            <td><%=arr.get(12)%></td>
-            <td><%=arr.get(13)%></td>
-            <td><%=arr.get(14)%></td>
-            <td><%=arr.get(15)%></td>
+            <td id="tNode"><%=arr.get(0)%></td>
+            <td class="ganti" id="tKapDeg"><%=arr.get(1)%></td>
+            <td class="ganti" id="tKapTang"><%=arr.get(2)%></td>
+            <td class="ganti" id="tBulanLaluSolar"><%=arr.get(3)%></td>
+            <td class="ganti" id="tBulanLaluOli"><%=arr.get(4)%></td>
+            <td class="ganti" id="tJamJalanDegBulanLalu"><%=arr.get(5)%></td>
+            <td class="ganti" id="tJamJalanDegBulIni"><%=arr.get(6)%></td>
+            <td class="ganti" id="tJMLJamJalan"><%=arr.get(7)%></td>
+            <td class="ganti" id="tPakaiSolar"><%=arr.get(8)%></td>
+            <td class="ganti" id="tPakaiOli"><%=arr.get(9)%></td>
+            <td class="ganti" id="tTambahSolar"><%=arr.get(10)%></td>
+            <td class="ganti"><%=arr.get(11)%></td>
+            <td class="ganti"><%=arr.get(12)%></td>
+            <td class="ganti"><%=arr.get(13)%></td>
+            <td class="ganti <%=kelas%>"><%=arr.get(14)%></td>
+            <td class="ganti" id="tKet"><%=arr.get(15)%></td>
         </tr>
         <%
             }//end arrDataD loop
@@ -109,6 +113,7 @@
 <%
     ArrayList<String> arrM = arrDataM.get(0); 
 %>
+<hr>
 <div style="font-family: sans-serif; font-size: medium" class="text-left">
     <div class="row">
         <div class="col-md-6">
@@ -136,6 +141,7 @@
     var exportTitle = 'Laporan Stok BBM';
     $("#myTable").DataTable({
         lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+        paging: false,
         dom: 'lBfrtip',
         buttons: [
             'colvis',

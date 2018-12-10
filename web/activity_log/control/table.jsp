@@ -1,8 +1,9 @@
 <%-- 
-    Document   : tableUser
-    Created on : Nov 29, 2018, 1:59:57 PM
+    Document   : table
+    Created on : Dec 10, 2018, 7:14:17 AM
     Author     : Lenovo
 --%>
+
 
 <%@page import="org.json.JSONObject"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,7 +12,9 @@
 <%
     MyConnector con = new MyConnector();
     con.createConnection();
-    String query="Select nik, `name`, phone, email from adm_user;";
+    String query = "SELECT  lg.nik, usr.`name`, lg.activity, lg.waktu "
+            + "FROM activity_log lg "
+            + "LEFT JOIN adm_user usr ON lg.nik = usr.nik ORDER BY lg.waktu DESC;";
     ArrayList<ArrayList<String>> arrData = con.getData(query);
     con.closeConnection();
 %>
@@ -19,69 +22,86 @@
     <thead>
         <tr>
             <th>NIK</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th class="not-export">Action</th>
+            <th>Nama</th>
+            <th>Aktivitas</th>
+            <th>Waktu</th>
         </tr>
     </thead>
     <tbody>
         <%
-            for(ArrayList<String> arr : arrData){
-                JSONObject json = new JSONObject();
-                json.put("nik", arr.get(0));
-                json.put("name", arr.get(1));
-                json.put("phone", arr.get(2));
-                json.put("email", arr.get(3));
+            for (ArrayList<String> arr : arrData) {
+
         %>
         <tr>
             <td><%=arr.get(0)%></td>
             <td><%=arr.get(1)%></td>
             <td><%=arr.get(2)%></td>
             <td><%=arr.get(3)%></td>
-            <td>
-                <span class="hidden" id="hiddenInput"><%=json.toString()%></span>
-                <button id="btnUpdateModal" class="btn btn-default"><i class="fa fa-edit"></i></button>
-                <button id="btnPwdModal" class="btn btn-warning"><i class="fa fa-key"></i></button>
-                <button id="btnDelete" class="btn btn-danger"><i class="fa fa-times-circle"></i></button>
-            </td>
         </tr>
         <%
             }
         %>
     </tbody>
+    <tfoot style="display: table-header-group">
+        <tr>
+            <th>NIK</th>
+            <th>Nama</th>
+            <th>Aktivitas</th>
+            <th>Waktu</th>
+        </tr>
+    </tfoot>
 </table>
 
 <script>
-    var exportTitle = 'Exisitng User Of STO Tasikmalaya InfoCentre';
-    $("#myTable").DataTable({
+    var exportTitle = 'Log Aktivitas User STiC';
+    // Setup - add a text input to each footer cell
+    $('#myTable tfoot th').each(function () {
+        var title = $(this).text();
+        $(this).html('<input type="text" placeholder="Cari ' + title + '" />');
+    });
+
+    var table = $("#myTable").DataTable({
         dom: 'lBfrtip',
         buttons: [
             'colvis',
             {
                 extend: 'excel',
                 title: exportTitle,
-                exportOptions:{
+                exportOptions: {
                     columns: ':visible :not(.not-export)'
                 }
             },
             {
                 extend: 'csv',
                 title: exportTitle,
-                exportOptions:{
+                exportOptions: {
                     columns: ':visible :not(.not-export)'
                 }
-            },            
+            },
             {
                 extend: 'print',
                 title: exportTitle,
-                customize: function(win){
+                customize: function (win) {
                     $(win.document.body).append('<div style="text-align: right;padding-top:10px;"><br>Total Number of Users : <%=arrData.size()%> </div>');
                 },
-                exportOptions:{
+                exportOptions: {
                     columns: ':visible :not(.not-export)'
                 }
-            }            
+            }
         ]
     });
+
+    // Apply the search
+    table.columns().every(function () {
+        var that = this;
+
+        $('input', this.footer()).on('keyup change', function () {
+            if (that.search() !== this.value) {
+                that
+                        .search(this.value)
+                        .draw();
+            }
+        });
+    });
 </script>
+

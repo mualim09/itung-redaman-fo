@@ -4,8 +4,16 @@
     Author     : Lenovo
 --%>
 
+<%@page import="helper.MySession"%>
+<%
+    String nik = (String) session.getAttribute(MySession.NIK);
+    if(nik != null){
+        response.sendRedirect("../manage_bbm");
+        return;
+    }
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html >
     <head>
