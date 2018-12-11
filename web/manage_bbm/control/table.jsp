@@ -8,6 +8,7 @@
 <%@page import="dbcon.MyConnector"%>
 <%
     String tanggalPilihan = request.getParameter("tanggal");
+    String namaBulan = request.getParameter("namaBulan");
     String sqlWhere = "AND date_format(bm.tanggal, '%m %Y')='" + tanggalPilihan + "';";
     if (tanggalPilihan.equals("-")) {
         sqlWhere = "AND bm.tanggal = (SELECT max(tanggal) from stok_bbm_master WHERE witel='TASIKMALAYA' limit 1)";
@@ -20,8 +21,7 @@
             //      11                      12
             + "bm.pembelian_solar, bm.pembelian_oli "
             + "FROM stok_bbm_master bm WHERE bm.witel='TASIKMALAYA' " + sqlWhere;
-    
-    
+
 //    out.print("<br>"+query);
     MyConnector con = new MyConnector();
     con.createConnection();
@@ -60,6 +60,7 @@
             <th colspan="2">PERSEDIAAN</th>
             <th rowspan="2">BACKUP TIME(JAM)</th>
             <th rowspan="2">KETERANGAN</th>
+            <th rowspan="2" class="not-export">HAPUS</th>
         </tr>
         <tr>
             <th>DEG(KVA)</th>
@@ -81,9 +82,9 @@
         <%            int noList = 0;
             for (ArrayList<String> arr : arrDataD) {
                 noList++;
-                String kelas="";
-                if(Double.parseDouble(arr.get(14)) < 4.0){
-                    kelas="danger";
+                String kelas = "";
+                if (Double.parseDouble(arr.get(14)) < 4.0) {
+                    kelas = "danger";
                 }
         %>
         <tr>
@@ -99,46 +100,51 @@
             <td class="ganti" id="tPakaiSolar"><%=arr.get(8)%></td>
             <td class="ganti" id="tPakaiOli"><%=arr.get(9)%></td>
             <td class="ganti" id="tTambahSolar"><%=arr.get(10)%></td>
-            <td class="ganti"><%=arr.get(11)%></td>
-            <td class="ganti"><%=arr.get(12)%></td>
-            <td class="ganti"><%=arr.get(13)%></td>
-            <td class="ganti <%=kelas%>"><%=arr.get(14)%></td>
+            <td class="ganti" id="tTambahOli"><%=arr.get(11)%></td>
+            <td class="ganti" id="tSediaSolar"><%=arr.get(12)%></td>
+            <td class="ganti" id="tSediaOli"><%=arr.get(13)%></td>
+            <td class="ganti <%=kelas%>" id="tBackupTime"><%=arr.get(14)%></td>
             <td class="ganti" id="tKet"><%=arr.get(15)%></td>
+            <td ><button id="btnDeleteNode" class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
         </tr>
         <%
             }//end arrDataD loop
         %>
     </tbody>
 </table>
+        <h4 class="pull-right">
+            <button id="btnAddNodeModal" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah Node</button>
+        </h4>
+        <div style="clear: both"></div>
 <%
-    ArrayList<String> arrM = arrDataM.get(0); 
+    ArrayList<String> arrM = arrDataM.get(0);
 %>
 <hr>
 <div style="font-family: sans-serif; font-size: medium" class="text-left">
     <div class="row">
         <div class="col-md-6">
-            <p>Jumlah jam jalan DEG: <b><%=arrM.get(2)%></b></p>
-            <p>Jumlah sisa SOLAR bulan lalu(Liter): <b><%=arrM.get(0)%></b></p>
-            <p>Jumlah pemakaian SOLAR(Liter): <b><%=arrM.get(3)%></b></p>
-            <p>Jumlah penambahan SOLAR(Liter): <b><%=arrM.get(5)%></b></p>
-            <p>Jumlah persediaan SOLAR(Liter): <b><%=arrM.get(7)%></b></p>
-            <p>Pembelian SOLAR(Liter): <b><%=arrM.get(11)%></b></p>
-            <p>Tangki backup bulan lalu(Liter): <b><%=arrM.get(9)%></b></p>
+            <p>Jumlah jam jalan DEG: <b class="b-ganti" id="fJumlahJamJalanDeg"><%=arrM.get(2)%></b></p>
+            <p>Jumlah sisa SOLAR bulan lalu(Liter): <b class="b-ganti" id="fJumlahSisaSolarBulanLalu"><%=arrM.get(0)%></b></p>
+            <p>Jumlah pemakaian SOLAR(Liter): <b class="b-ganti" id="fJumlahPemakaianSolar"><%=arrM.get(3)%></b></p>
+            <p>Jumlah penambahan SOLAR(Liter): <b class="b-ganti" id="fJumlahPenambahanSolar"><%=arrM.get(5)%></b></p>
+            <p>Jumlah persediaan SOLAR(Liter): <b class="b-ganti" id="fJumlahPersediaanSolar"><%=arrM.get(7)%></b></p>
+            <p>Pembelian SOLAR(Liter): <b class="b-ganti" id="fPembelianSolar"><%=arrM.get(11)%></b></p>
+            <p>Tangki backup bulan lalu(Liter): <b class="b-ganti" id="fTangkiBulanLalu"><%=arrM.get(9)%></b></p>
         </div>
         <div class="col-md-6">
             <p>&nbsp;</p>
-            <p>Jumlah sisa OLI bulan lalu(Liter): <b><%=arrM.get(1)%></b></p>
-            <p>Jumlah pemakaian OLI(Liter): <b><%=arrM.get(4)%></b></p>
-            <p>Jumlah penambahan OLI(Liter): <b><%=arrM.get(6)%></b></p>
-            <p>Jumlah persediaan OLI(Liter): <b><%=arrM.get(8)%></b></p>
-            <p>Pembelian OLI(Liter): <b><%=arrM.get(12)%></b></p>
-            <p>Tangki backup bulan ini(Liter): <b><%=arrM.get(10)%></b></p>
+            <p>Jumlah sisa OLI bulan lalu(Liter): <b class="b-ganti" id="fJumlahSisaOliBulanLalu"><%=arrM.get(1)%></b></p>
+            <p>Jumlah pemakaian OLI(Liter): <b class="b-ganti" id="fJumlahPemakaianOli"><%=arrM.get(4)%></b></p>
+            <p>Jumlah penambahan OLI(Liter): <b class="b-ganti" id="fJumlahPenambahanOli"><%=arrM.get(6)%></b></p>
+            <p>Jumlah persediaan OLI(Liter): <b class="b-ganti" id="fJumlahPersediaanOli"><%=arrM.get(8)%></b></p>
+            <p>Pembelian OLI(Liter): <b class="b-ganti" id="fPembelianOli"><%=arrM.get(12)%></b></p>
+            <p>Tangki backup bulan ini(Liter): <b class="b-ganti" id="fTangkiBulanIni"><%=arrM.get(10)%></b></p>
         </div>
     </div>
 </div>
 
 <script>
-    var exportTitle = 'Laporan Stok BBM';
+    var exportTitle = 'Laporan Stok BBM Bulan <%=namaBulan%>';
     $("#myTable").DataTable({
         lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
         paging: false,

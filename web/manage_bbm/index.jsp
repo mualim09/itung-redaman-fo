@@ -26,6 +26,14 @@
             .ganti:hover { 
                 background-color: yellow;
             }
+
+            .b-ganti{
+                cursor: pointer;
+            }
+
+            .b-ganti:hover{
+                color: #007bff;
+            }
         </style>
 
     </head>
@@ -196,7 +204,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formKet">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -226,8 +234,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-         <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalKapDeg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -238,7 +246,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formKapDeg">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -276,8 +284,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-         <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalKapTang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -288,7 +296,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formKapTang">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -326,8 +334,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-          <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalBulanLaluSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -338,7 +346,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formBulanLaluSolar">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -376,8 +384,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-          <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalBulanLaluOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -388,7 +396,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formBulanLaluOli">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -426,8 +434,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-          <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalJamJalanDegBulanLalu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -438,7 +446,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formJamJalanDegBulanLalu">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -476,8 +484,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-           <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalJMLJamJalan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -488,7 +496,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formJMLJamJalan">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -526,8 +534,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-            <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalPakaiSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -538,7 +546,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formPakaiSolar">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -577,7 +585,7 @@
         </div>
         <!-- /.modal -->
 
-              <!-- Modal -->
+        <!-- Modal -->
         <div class="modal fade" id="modalPakaiOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -588,7 +596,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formPakaiOli">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -626,8 +634,8 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        
-               <!-- Modal -->
+
+        <!-- Modal -->
         <div class="modal fade" id="modalTambahSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -638,7 +646,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal" id="formTambahSolar">
                             <fieldset>
-                                 <!-- Text input-->
+                                <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Node</label>  
                                     <div class="col-md-6">
@@ -676,6 +684,800 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalTambahOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Penambahan Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formTambahOli">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Node</label>  
+                                    <div class="col-md-6">
+                                        <input name="textinput" type="text" class="form-control input-md leNode" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="tambahOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="tambahOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateTambahOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalSediaSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Persediaaan Solar (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formSediaSolar">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Node</label>  
+                                    <div class="col-md-6">
+                                        <input name="textinput" type="text" class="form-control input-md leNode" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="SediaSolarLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="SediaSolarBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateSediaSolar" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalSediaOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Persediaaan Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formSediaOli">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Node</label>  
+                                    <div class="col-md-6">
+                                        <input name="textinput" type="text" class="form-control input-md leNode" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="SediaOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="SediaOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateSediaOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalBackupTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Backup Time (Jam)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formBackupTime">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Node</label>  
+                                    <div class="col-md-6">
+                                        <input name="textinput" type="text" class="form-control input-md leNode" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="BackupTimeLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="BackupTimeBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateBackupTime" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalJumlahJalanDeg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Jam Jalan Deg</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahJalanDeg">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahJalanDegLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahJalanDegBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahJalanDeg" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalJumlahSisaSolarBulanLalu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Sisa Solar Bulan Lalu (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahSisaSolarBulanLalu">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahSisaSolarBulanLaluLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahSisaSolarBulanLaluBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahSisaSolarBulanLalu" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalJumlahPemakaianSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Pemakaian Solar (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPemakaianSolar">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPemakaianSolarLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPemakaianSolarBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPemakaianSolar" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal fade" id="modalJumlahPenambahanSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Penambahan Solar (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPenambahanSolar">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPenambahanSolarLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPenambahanSolarBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPenambahanSolar" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalJumlahPersediaanSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Persediaan Solar (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPersediaanSolar">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPersediaanSolarLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPersediaanSolarBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPersediaanSolar" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalPembelianSolar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Pembelian Solar (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formPembelianSolar">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="PembelianSolarLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="PembelianSolarBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdatePembelianSolar" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalTangkiBackupBulanLalu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Tangki Backup Bulan Lalu (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formTangkiBackupBulanLalu">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="TangkiBackupBulanLaluLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="TangkiBackupBulanLaluBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateTangkiBackupBulanLalu" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalJumlahSisaOliBulanLalu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Sisa Oli Bulan Lalu (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahSisaOliBulanLalu">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahSisaOliBulanLaluLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahSisaOliBulanLaluBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahSisaOliBulanLalu" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalJumlahPemakaianOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Pemakaian Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPemakaianOli">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPemakaianOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPemakaianOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPemakaianOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalJumlahPenambahanOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Penambahan Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPenambahanOli">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPenambahanOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPenambahanOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPenambahanOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalJumlahPersediaanOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Jumlah Persediaan Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formJumlahPersediaanOli">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPersediaanOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="JumlahPersediaanOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateJumlahPersediaanOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalPembelianOli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Pembelian Oli (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formPembelianOli">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="PembelianOliLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="PembelianOliBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdatePembelianOli" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalTangkiBulanIni" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Tangki Backup Bulan Ini (Liter)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formTangkiBulanIni">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai lama</label>  
+                                    <div class="col-md-6">
+                                        <input id="TangkiBulanIniLama" name="textinput" type="text" class="form-control input-md" required=""  readonly="">
+
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nilai baru</label>  
+                                    <div class="col-md-6">
+                                        <input id="TangkiBulanIniBaru" name="textinput" type="number" placeholder="Nilai terkini" class="form-control input-md" required="" max="99999.99" min="0" step="0.01">
+
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnUpdateTangkiBulanIni" type="button" class="btn btn-primary forUpdate">Simpan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!--modal-->        
+        <div class="modal fade" id="modalAddNode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Tambah Node Baru</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formAddNode">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Nama Node</label>  
+                                    <div class="col-md-6">
+                                        <input id="inNamaNode" name="textinput" type="text" class="form-control input-md" required=""  maxlength="200">
+
+                                    </div>
+                                </div>                             
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnAddNode" type="button" class="btn btn-primary forUpdate">Tambahkan</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
 
         <!-- jQuery -->
         <jsp:include page="../share/javascript.jsp"/>
@@ -722,6 +1524,7 @@
                             }
 
                             $('#judulTanggal').text($('#selectMonth').find('option:selected').text());
+                            loadTable("-", null);
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
 
@@ -734,7 +1537,6 @@
 
                 loadTanggal(null);
 
-                loadTable("-", null);
 
                 $('#selectMonth').on('change', function () {
                     var tanggal = $(this).val();
@@ -757,12 +1559,15 @@
                     $('#inNIK').prop('disabled', false);
                 });
 
-                function loadTable(tanggal, dialog) {
+                function loadTable(tanggal, dialog, id) {
                     $('#divTable').html('');
-                    $('#divTable').load('control/table.jsp', {'tanggal': tanggal}, function () {
+                    var nama = $('#selectMonth').find('option:selected').text();
+                    $('#divTable').load('control/table.jsp', {'tanggal': tanggal, 'namaBulan': nama}, function () {
                         if (dialog != null) {
                             dialog.modal('hide');
                         }
+                        if (id != null)
+                            window.location.hash = '#' + id;
                     });
                 }
 
@@ -875,7 +1680,48 @@
 
                 });
 
-               
+                $('#divTable').on('click', '#btnAddNodeModal', function () {
+                    $('#formAddNode')[0].reset();
+                    $('#modalAddNode').modal('show');
+                });
+
+                $('#btnAddNode').on('click', function () {
+                    if (!$('#formAddNode')[0].checkValidity()) {
+                        $('<input type="submit">').hide().appendTo($('#formAddNode')).click().remove();
+                        return;
+                    }
+
+                    var node = $('#inNamaNode').val();
+                    node = node.replace(/'/g, "\\\'").replace(/"/g, "\\\"");
+                    var tanggal = $('#selectMonth').val();
+
+                    var inData = {
+                        node: node,
+                        tanggal: tanggal
+                    };
+
+                    var dialog = createLoadingDialog(null);
+                    $.ajax({
+                        type: 'POST',
+                        data: inData,
+                        dataType: 'json',
+                        url: "control/addNode.jsp",
+                        timeout: 60000,
+                        success: function (data, textStatus, jqXHR) {
+                            bootbox.alert(data.msg);
+                            if(data.isValid){
+                                loadTable(tanggal, createLoadingDialog());
+                                $('#modalAddNode').modal('hide');
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            createErrorAlert(null, errorThrown);
+                        },
+                        complete: function (jqXHR, textStatus) {
+                            dialog.modal('hide');
+                        }
+                    });
+                });
 
                 $('#divTable').on('click', '#btnDelete', function () {
                     var hidden = $(this).closest('td').find('#hiddenInput').text();
@@ -931,6 +1777,29 @@
 
                 });
 
+                $('#divTable').on('click', '#btnDeleteNode', function () {
+                    var node = $(this).closest('tr').find('#tNode').text();
+                    $('#hidNode').val(node);
+                    bootbox.confirm({
+                        message: "Apa betul anda ingin menghapus node " + node + " dari laporan ini?",
+                        buttons: {
+                            confirm: {
+                                label: 'Ya',
+                                className: 'btn-success'
+                            },
+                            cancel: {
+                                label: 'Tidak',
+                                className: 'btn-danger'
+                            }
+                        },
+                        callback: function (result) {
+                            if (result) {
+                                forUpdateGeneric(null, null, null, null, "deleteNode.jsp", null);
+                            }
+                        }
+                    });
+                });
+
                 $('#divTable').on('click', '.ganti', function () {
                     var nilai = $(this).text();
                     var row = $(this).closest('tr');
@@ -953,82 +1822,215 @@
                         $('#modalKet').modal('show');
                         return;
                     }
-                    
-                    if(id === "tKapDeg"){
+
+                    if (id === "tKapDeg") {
                         $('#KapDegBaru').val("");
                         $('#KapDegLama').val(nilai);
                         $('#modalKapDeg').modal('show');
                         return;
                     }
-                    
-                    if(id === "tKapTang"){
+
+                    if (id === "tKapTang") {
                         $('#KapTangBaru').val("");
                         $('#KapTangLama').val(nilai);
                         $('#modalKapTang').modal('show');
                         return;
                     }
-                    
-                    if(id=== "tBulanLaluSolar"){
+
+                    if (id === "tBulanLaluSolar") {
                         $('#BulanLaluSolarBaru').val("");
                         $('#BulanLaluSolarLama').val(nilai);
                         $('#modalBulanLaluSolar').modal('show');
                         return;
                     }
-                    
-                    if(id==="tBulanLaluOli"){
+
+                    if (id === "tBulanLaluOli") {
                         $('#BulanLaluOliBaru').val("");
                         $('#BulanLaluOliLama').val(nilai);
                         $('#modalBulanLaluOli').modal('show');
                         return;
                     }
-                    
-                    if(id==="tJamJalanDegBulanLalu"){
+
+                    if (id === "tJamJalanDegBulanLalu") {
                         $('#JamJalanDegBulanLaluBaru').val("");
                         $('#JamJalanDegBulanLaluLama').val(nilai);
                         $('#modalJamJalanDegBulanLalu').modal('show');
                         return;
                     }
-                    
-                    if(id==="tJMLJamJalan"){
+
+                    if (id === "tJMLJamJalan") {
                         $('#JMLJamJalanBaru').val("");
                         $('#JMLJamJalanLama').val(nilai);
                         $('#modalJMLJamJalan').modal('show');
                         return;
                     }
-                    
-                    if(id==="tPakaiSolar"){
+
+                    if (id === "tPakaiSolar") {
                         $('#pakaiSolarBaru').val("");
                         $('#pakaiSolarLama').val(nilai);
                         $('#modalPakaiSolar').modal('show');
                         return;
                     }
-                    
-                    if(id==="tPakaiOli"){
+
+                    if (id === "tPakaiOli") {
                         $('#pakaiOliBaru').val("");
                         $('#pakaiOliLama').val(nilai);
                         $('#modalPakaiOli').modal('show');
                         return;
                     }
-                    
-                    if(id==="tTambahSolar"){
+
+                    if (id === "tTambahSolar") {
                         $('#tambahSolarBaru').val("");
                         $('#tambahSolarLama').val(nilai);
                         $('#modalTambahSolar').modal('show');
                         return;
                     }
-                    
+
+                    if (id === "tTambahOli") {
+                        $('#tambahOliBaru').val("");
+                        $('#tambahOliLama').val(nilai);
+                        $('#modalTambahOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "tSediaSolar") {
+                        $('#SediaSolarBaru').val("");
+                        $('#SediaSolarLama').val(nilai);
+                        $('#modalSediaSolar').modal('show');
+                        return;
+                    }
+
+                    if (id === "tSediaOli") {
+                        $('#SediaOliBaru').val("");
+                        $('#SediaOliLama').val(nilai);
+                        $('#modalSediaOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "tBackupTime") {
+                        $('#BackupTimeBaru').val("");
+                        $('#BackupTimeLama').val(nilai);
+                        $('#modalBackupTime').modal('show');
+                        return;
+                    }
+
                 });
-                
-                function forUpdateGeneric($form, $lama, $baru, $modal, url){
-                   
-                    if (!$form[0].checkValidity()) {
+
+                $('#divTable').on('click', '.b-ganti', function () {
+                    var nilai = $(this).text();
+                    var id = $(this).attr('id');
+
+                    console.log(nilai + " " + id);
+
+                    if (id === "fJumlahJamJalanDeg") {
+                        $('#JumlahJalanDegBaru').val("");
+                        $('#JumlahJalanDegLama').val(nilai);
+                        $('#modalJumlahJalanDeg').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahSisaSolarBulanLalu") {
+                        $('#JumlahSisaSolarBulanLaluBaru').val("");
+                        $('#JumlahSisaSolarBulanLaluLama').val(nilai);
+                        $('#modalJumlahSisaSolarBulanLalu').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPemakaianSolar") {
+                        $('#JumlahPemakaianSolarBaru').val("");
+                        $('#JumlahPemakaianSolarLama').val(nilai);
+                        $('#modalJumlahPemakaianSolar').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPenambahanSolar") {
+                        $('#JumlahPenambahanSolarBaru').val("");
+                        $('#JumlahPenambahanSolarLama').val(nilai);
+                        $('#modalJumlahPenambahanSolar').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPersediaanSolar") {
+                        $('#JumlahPersediaanSolarBaru').val("");
+                        $('#JumlahPersediaanSolarLama').val(nilai);
+                        $('#modalJumlahPersediaanSolar').modal('show');
+                        return;
+                    }
+
+                    if (id === "fPembelianSolar") {
+                        $('#PembelianSolarBaru').val("");
+                        $('#PembelianSolarLama').val(nilai);
+                        $('#modalPembelianSolar').modal('show');
+                        return;
+                    }
+
+                    if (id === "fTangkiBulanLalu") {
+                        $('#TangkiBackupBulanLaluBaru').val("");
+                        $('#TangkiBackupBulanLaluLama').val(nilai);
+                        $('#modalTangkiBackupBulanLalu').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahSisaOliBulanLalu") {
+                        $('#JumlahSisaOliBulanLaluBaru').val("");
+                        $('#JumlahSisaOliBulanLaluLama').val(nilai);
+                        $('#modalJumlahSisaOliBulanLalu').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPemakaianOli") {
+                        $('#JumlahPemakaianOliBaru').val("");
+                        $('#JumlahPemakaianOliLama').val(nilai);
+                        $('#modalJumlahPemakaianOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPenambahanOli") {
+                        $('#JumlahPenambahanOliBaru').val("");
+                        $('#JumlahPenambahanOliLama').val(nilai);
+                        $('#modalJumlahPenambahanOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "fJumlahPersediaanOli") {
+                        $('#JumlahPersediaanOliBaru').val("");
+                        $('#JumlahPersediaanOliLama').val(nilai);
+                        $('#modalJumlahPersediaanOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "fPembelianOli") {
+                        $('#PembelianOliBaru').val("");
+                        $('#PembelianOliLama').val(nilai);
+                        $('#modalPembelianOli').modal('show');
+                        return;
+                    }
+
+                    if (id === "fTangkiBulanIni") {
+                        $('#TangkiBulanIniBaru').val("");
+                        $('#TangkiBulanIniLama').val(nilai);
+                        $('#modalTangkiBulanIni').modal('show');
+                        return;
+                    }
+                });
+
+                function forUpdateGeneric($form, $lama, $baru, $modal, url, id) {
+
+                    if ($form != null && !$form[0].checkValidity()) {
                         $('<input type="submit">').hide().appendTo($form).click().remove();
                         return false;
                     }
                     
+                    var lama, baru;
+                    if($lama != null)
+                        lama = $lama.val();
+                    
+                    if($baru != null)
+                        baru = $baru != null;
+
                     var inData = {
-                        lama: $lama.val(),
-                        baru: $baru.val(),
+                        lama: lama,
+                        baru: baru,
                         node: $('#hidNode').val(),
                         tanggal: $('#selectMonth').val()
                     };
@@ -1039,14 +2041,17 @@
                         type: 'POST',
                         data: inData,
                         timeout: 60000,
-                        url: "control/"+url,
+                        url: "control/" + url,
                         dataType: 'json',
                         success: function (data, textStatus, jqXHR) {
                             bootbox.alert(data.msg);
                             if (data.isValid) {
-                                loadTable(inData.tanggal, createLoadingDialog(null));
-                                $modal.modal('hide');
-                                $form[0].reset();
+                                loadTable(inData.tanggal, createLoadingDialog(null), id);
+                                if ($modal != null)
+                                    $modal.modal('hide');
+
+                                if ($form != null)
+                                    $form[0].reset();
                             }
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
@@ -1057,43 +2062,111 @@
                         }
                     });
                 }
-                
-                 $('#btnUpdateTambahSolar').on('click', function(){
-                    forUpdateGeneric($('#formTambahSolar'), $('#tambahSolarLama'), $('#tambahSolarBaru'), $('#modalTambahSolar'), "updateTambahSolar.jsp");   
+
+                $('#btnUpdateTangkiBulanIni').on('click', function () {
+                    forUpdateGeneric($('#formTangkiBulanIni'), $('#TangkiBulanIniLama'), $('#TangkiBulanIniBaru'), $('#modalTangkiBulanIni'), "updateTangkiBulanIni.jsp", "fTangkiBulanIni");
                 });
-                
-                $('#btnUpdatePakaiOli').on('click', function(){
-                    forUpdateGeneric($('#formPakaiOli'), $('#pakaiOliLama'), $('#pakaiOliBaru'), $('#modalPakaiOli'), "updatePakaiOli.jsp");   
+
+                $('#btnUpdatePembelianOli').on('click', function () {
+                    forUpdateGeneric($('#formPembelianOli'), $('#PembelianOliLama'), $('#PembelianOliBaru'), $('#modalPembelianOli'), "updatePembelianOli.jsp", "fPembelianOli");
                 });
-                
-                $('#btnUpdatePakaiSolar').on('click', function(){
-                    forUpdateGeneric($('#formPakaiSolar'), $('#pakaiSolarLama'), $('#pakaiSolarBaru'), $('#modalPakaiSolar'), "updatePakaiSolar.jsp");   
+
+                $('#btnUpdateJumlahPersediaanOli').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPersediaanOli'), $('#JumlahPersediaanOliLama'), $('#JumlahPersediaanOliBaru'), $('#modalJumlahPersediaanOli'), "updateJumlahPersediaanOli.jsp", "fJumlahPersediaanOli");
                 });
-                
-                $('#btnUpdateJMLJamJalan').on('click', function(){
-                    forUpdateGeneric($('#formJMLJamJalan'), $('#JMLJamJalanLama'), $('#JMLJamJalanBaru'), $('#modalJMLJamJalan'), "updateJMLJamJalan.jsp");   
+
+                $('#btnUpdateJumlahPenambahanOli').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPenambahanOli'), $('#JumlahPenambahanOliLama'), $('#JumlahPenambahanOliBaru'), $('#modalJumlahPenambahanOli'), "updateJumlahPenambahanOli.jsp", "fJumlahPenambahanOli");
                 });
-                
-                $('#btnUpdateJamJalanDegBulanLalu').on('click', function(){
-                    forUpdateGeneric($('#formJamJalanDegBulanLalu'), $('#JamJalanDegBulanLaluLama'), $('#JamJalanDegBulanLaluBaru'), $('#modalJamJalanDegBulanLalu'), "updateJamJalanDegBulanLalu.jsp");   
+
+                $('#btnUpdateJumlahPemakaianOli').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPemakaianOli'), $('#JumlahPemakaianOliLama'), $('#JumlahPemakaianOliBaru'), $('#modalJumlahPemakaianOli'), "updateJumlahPemakaianOli.jsp", "fJumlahPemakaianOli");
                 });
-                
-                $('#btnUpdateBulanLaluOli').on('click', function(){
-                     forUpdateGeneric($('#formBulanLaluOli'), $('#BulanLaluOliLama'), $('#BulanLaluOliBaru'), $('#modalBulanLaluOli'), "udapteBulanLaluOli.jsp");        
+
+                $('#btnUpdateJumlahSisaOliBulanLalu').on('click', function () {
+                    forUpdateGeneric($('#formJumlahSisaOliBulanLalu'), $('#JumlahSisaOliBulanLaluLama'), $('#JumlahSisaOliBulanLaluBaru'), $('#modalJumlahSisaOliBulanLalu'), "updateJumlahSisaOliBulanLalu.jsp", "fJumlahSisaOliBulanLalu");
                 });
-                
-                $('#btnUpdateBulanLaluSolar').on('click', function(){
-                    forUpdateGeneric($('#formBulanLaluSolar'), $('#BulanLaluSolarLama'), $('#BulanLaluSolarBaru'), $('#modalBulanLaluSolar'), "udapteBulanLaluSolar.jsp");                    
+
+                $('#btnUpdateTangkiBackupBulanLalu').on('click', function () {
+                    forUpdateGeneric($('#formTangkiBackupBulanLalu'), $('#TangkiBackupBulanLaluLama'), $('#TangkiBackupBulanLaluBaru'), $('#modalTangkiBackupBulanLalu'), "updateTangkiBackupBulanLalu.jsp", "fTangkiBulanLalu");
                 });
-                
-                $('#btnUpdateKapTang').on('click', function(){
+
+                $('#btnUpdatePembelianSolar').on('click', function () {
+                    forUpdateGeneric($('#formPembelianSolar'), $('#PembelianSolarLama'), $('#PembelianSolarBaru'), $('#modalPembelianSolar'), "updatePembelianSolar.jsp", "fPembelianSolar");
+                });
+
+                $('#btnUpdateJumlahPersediaanSolar').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPersediaanSolar'), $('#JumlahPersediaanSolarLama'), $('#JumlahPersediaanSolarBaru'), $('#modalJumlahPersediaanSolar'), "updateJumlahPersediaanSolar.jsp");
+                });
+
+                $('#btnUpdateJumlahPenambahanSolar').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPenambahanSolar'), $('#JumlahPenambahanSolarLama'), $('#JumlahPenambahanSolarBaru'), $('#modalJumlahPenambahanSolar'), "updateJumlahPenambahanSolar.jsp");
+                });
+
+                $('#btnUpdateJumlahPemakaianSolar').on('click', function () {
+                    forUpdateGeneric($('#formJumlahPemakaianSolar'), $('#JumlahPemakaianSolarLama'), $('#JumlahPemakaianSolarBaru'), $('#modalJumlahPemakaianSolar'), "updateJumlahPemakaianSolar.jsp");
+                });
+
+                $('#btnUpdateJumlahSisaSolarBulanLalu').on('click', function () {
+                    forUpdateGeneric($('#formJumlahSisaSolarBulanLalu'), $('#JumlahSisaSolarBulanLaluLama'), $('#JumlahSisaSolarBulanLaluBaru'), $('#modalJumlahSisaSolarBulanLalu'), "updateJumlahSisaSolarBulanLalu.jsp");
+                });
+
+                $('#btnUpdateJumlahJalanDeg').on('click', function () {
+                    forUpdateGeneric($('#formJumlahJalanDeg'), $('#JumlahJalanDegLama'), $('#JumlahJalanDegBaru'), $('#modalJumlahJalanDeg'), "updateJumlahJalanDeg.jsp");
+                });
+
+                $('#btnUpdateBackupTime').on('click', function () {
+                    forUpdateGeneric($('#formBackupTime'), $('#BackupTimeLama'), $('#BackupTimeBaru'), $('#modalBackupTime'), "updateBackupTime.jsp");
+                });
+
+                $('#btnUpdateSediaOli').on('click', function () {
+                    forUpdateGeneric($('#formSediaOli'), $('#SediaOliLama'), $('#SediaOliBaru'), $('#modalSediaOli'), "updateSediaOli.jsp");
+                });
+
+                $('#btnUpdateSediaSolar').on('click', function () {
+                    forUpdateGeneric($('#formSediaSolar'), $('#SediaSolarLama'), $('#SediaSolarBaru'), $('#modalSediaSolar'), "updateSediaSolar.jsp");
+                });
+
+                $('#btnUpdateTambahOli').on('click', function () {
+                    forUpdateGeneric($('#formTambahOli'), $('#tambahOliLama'), $('#tambahOliBaru'), $('#modalTambahOli'), "updateTambahOli.jsp");
+                });
+
+                $('#btnUpdateTambahSolar').on('click', function () {
+                    forUpdateGeneric($('#formTambahSolar'), $('#tambahSolarLama'), $('#tambahSolarBaru'), $('#modalTambahSolar'), "updateTambahSolar.jsp");
+                });
+
+                $('#btnUpdatePakaiOli').on('click', function () {
+                    forUpdateGeneric($('#formPakaiOli'), $('#pakaiOliLama'), $('#pakaiOliBaru'), $('#modalPakaiOli'), "updatePakaiOli.jsp");
+                });
+
+                $('#btnUpdatePakaiSolar').on('click', function () {
+                    forUpdateGeneric($('#formPakaiSolar'), $('#pakaiSolarLama'), $('#pakaiSolarBaru'), $('#modalPakaiSolar'), "updatePakaiSolar.jsp");
+                });
+
+                $('#btnUpdateJMLJamJalan').on('click', function () {
+                    forUpdateGeneric($('#formJMLJamJalan'), $('#JMLJamJalanLama'), $('#JMLJamJalanBaru'), $('#modalJMLJamJalan'), "updateJMLJamJalan.jsp");
+                });
+
+                $('#btnUpdateJamJalanDegBulanLalu').on('click', function () {
+                    forUpdateGeneric($('#formJamJalanDegBulanLalu'), $('#JamJalanDegBulanLaluLama'), $('#JamJalanDegBulanLaluBaru'), $('#modalJamJalanDegBulanLalu'), "updateJamJalanDegBulanLalu.jsp");
+                });
+
+                $('#btnUpdateBulanLaluOli').on('click', function () {
+                    forUpdateGeneric($('#formBulanLaluOli'), $('#BulanLaluOliLama'), $('#BulanLaluOliBaru'), $('#modalBulanLaluOli'), "udapteBulanLaluOli.jsp");
+                });
+
+                $('#btnUpdateBulanLaluSolar').on('click', function () {
+                    forUpdateGeneric($('#formBulanLaluSolar'), $('#BulanLaluSolarLama'), $('#BulanLaluSolarBaru'), $('#modalBulanLaluSolar'), "udapteBulanLaluSolar.jsp");
+                });
+
+                $('#btnUpdateKapTang').on('click', function () {
                     var $form = $('#formKapTang');
 
                     if (!$form[0].checkValidity()) {
                         $('<input type="submit">').hide().appendTo($form).click().remove();
                         return false;
                     }
-                    
+
                     var inData = {
                         lama: $('#KapTangLama').val(),
                         baru: $('#KapTangBaru').val(),
@@ -1125,15 +2198,15 @@
                         }
                     });
                 });
-                
-                $('#btnUpdateKapDeg').on('click', function(){
-                     var $form = $('#formKapDeg');
+
+                $('#btnUpdateKapDeg').on('click', function () {
+                    var $form = $('#formKapDeg');
 
                     if (!$form[0].checkValidity()) {
                         $('<input type="submit">').hide().appendTo($form).click().remove();
                         return false;
                     }
-                    
+
                     var inData = {
                         lama: $('#KapDegLama').val(),
                         baru: $('#KapDegBaru').val(),
@@ -1164,7 +2237,7 @@
                             dialog.modal('hide');
                         }
                     });
-                    
+
                 });
 
                 $('#btnUpdateKet').on('click', function () {

@@ -53,7 +53,15 @@ public class BBM_Helper {
 
     public String queryCalcJumlahPersediaanSolar() {
         String query = "UPDATE stok_bbm_master "
-                + "SET jumlah_persediaan_solar = (SELECT SUM(persediaan_solar) FROM stok_bbm_detail WHERE witel='TASIKMALAYA' AND tanggal='2018-11-01') "
+                + "SET jumlah_persediaan_solar = (SELECT SUM(persediaan_solar) FROM stok_bbm_detail WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "') "
+                + "WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "'; ";
+
+        return query;
+    }
+    
+    public String queryCalcJumlahPersediaanOli() {
+        String query = "UPDATE stok_bbm_master "
+                + "SET jumlah_persediaan_oli = (SELECT SUM(persediaan_oli) FROM stok_bbm_detail WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "') "
                 + "WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "'; ";
 
         return query;
@@ -91,6 +99,14 @@ public class BBM_Helper {
     public String calcJumlahPenambahanSolar() {
         String query = "UPDATE stok_bbm_master "
                 + "SET jumlah_penambahan_solar = (SELECT SUM(penambahan_solar) FROM stok_bbm_detail WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "') "
+                + "WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "';";
+
+        return query;
+    }
+    
+    public String calcJumlahPenambahanOli() {
+        String query = "UPDATE stok_bbm_master "
+                + "SET jumlah_penambahan_oli = (SELECT SUM(penambahan_oli) FROM stok_bbm_detail WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "') "
                 + "WHERE witel='" + witel + "' AND tanggal='" + yyyymmdd + "';";
 
         return query;
