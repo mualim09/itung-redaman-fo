@@ -87,7 +87,7 @@
                         <h2 class="align-center pb-3 mbr-fonts-style display-2">
                             STO Tasikmalaya InfoCentre</h2>
                         <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
-                            Get the latest info and update about our daily activities here.<br>Never miss a single thing!</h3>
+                            Digitalize your data with STiC.<br>Make it available online!</h3>
 
                     </div>
                 </div>
@@ -103,13 +103,13 @@
                             <img src="../assets/images/photo6289805264135760094-952x714.jpg" alt="Kegiatan" title="">
                         </div>
                         <div class=" align-left aside-content">
-                            <h2 class="mbr-title pt-2 mbr-fonts-style display-2">Aktivitas</h2>
+                            <h2 class="mbr-title pt-2 mbr-fonts-style display-2">Tujuan</h2>
                             <div class="mbr-section-text">
                                 <p class="mbr-text mb-5 pt-3 mbr-light mbr-fonts-style display-5">
-                                    Jangan pernah terlewatkan info-info seputar tugas dan aktivitas harian kami di STO Tasikmalaya. Mulai dari tugas-tugas rutin hingga ke penanganan gangguan yang aktif 24 jam sehari, 7 hari seminggu.</p>
+                                    Tujuan utama pembangunan STiC ini adalah agar data-data yang ada di STO Tasikmalaya dapat didigitalisasi sehingga dapat disediakan online. Dengan itu akan memudahkan seluruh warga STO Tasikmalaya untuk monitoring data.</p>
                             </div>
 
-                            <div class="block-content">
+<!--                            <div class="block-content">
                                 <div class="card p-3 pr-3">
                                     <div class="media">
                                         <div class=" align-self-center card-img pb-3">
@@ -142,7 +142,7 @@
                                             Akses laporan terkini tentang data stok dan inventaris yang dikontrol oleh STO Tasikmalaya.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div> 
@@ -185,7 +185,7 @@
                             Links
                         </h5>
                         <p class="mbr-text">
-                            <a class="text-secondary" href="https://mobirise.co/">Backbone&nbsp;</a><br><a href="https://weathermap.telkom.co.id" class="text-secondary">Wheathermap</a><br><a class="text-secondary" href="https://mobirise.co/">KBMOnline</a></p>
+                            <a class="text-secondary" href="https://backbone.telkom.co.id">Backbone&nbsp;</a><br><a href="https://weathermap.telkom.co.id" class="text-secondary">Wheathermap</a><br><a class="text-secondary" href="https://portal.telkom.co.id">KBMOnline</a></p>
                     </div>
                 </div>
                 <div class="footer-lower">
@@ -203,32 +203,32 @@
                         <div class="col-md-6">
                             <div class="social-list align-right">
                                 <div class="soc-item">
-                                    <a href="https://twitter.com/mobirise" target="_blank">
+                                    <a href="https://twitter.com/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                                    <a href="https://www.facebook.com/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                                    <a href="https://www.youtube.com/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://instagram.com/mobirise" target="_blank">
+                                    <a href="https://instagram.com/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                                    <a href="https://plus.google.com/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-googleplus socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>
                                 <div class="soc-item">
-                                    <a href="https://www.behance.net/Mobirise" target="_blank">
+                                    <a href="https://www.behance.net/" target="_blank">
                                         <span class="mbr-iconfont mbr-iconfont-social socicon-behance socicon" style="color: rgb(252, 15, 15); fill: rgb(252, 15, 15);"></span>
                                     </a>
                                 </div>

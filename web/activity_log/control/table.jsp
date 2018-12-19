@@ -62,6 +62,7 @@
 
     var table = $("#myTable").DataTable({
         dom: 'lBfrtip',
+        aaSorting: [],
         buttons: [
             'colvis',
             {

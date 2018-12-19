@@ -53,11 +53,25 @@
                     <a href="../activity_log/"><i class="fa fa-book fa-fw"></i> Log Aktivitas</a>
                 </li>
                 <li>
+                    <a href="#"><i class="fa fa-arrows-h fa-fw"></i> siFO <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li>
+                            <a href="../sifo/">Utama</a>
+                        </li>
+                        <li>
+                            <a href="../sifo/tampilan.jsp">Tampilan</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../siPETA/"><i class="fa fa-map fa-fw"></i> siPETA</a>
+                </li>
+                <li>
                     <a href="../manage_bbm"><i class="fa fa-truck fa-fw"></i> Stok BBM</a>
                 </li>
-                <!--                 <li>
-                                    <a href="../home/"><i class="fa fa-cogs fa-fw"></i> CME</a>
-                                </li>-->
+                <li>
+                    <a href="../manage_cme/"><i class="fa fa-cogs fa-fw"></i> CME</a>
+                </li>
 
                 <!--                <li>
                                     <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>

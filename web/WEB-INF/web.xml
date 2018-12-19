@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	 version="3.1">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <servlet>
+        <servlet-name>inputFO</servlet-name>
+        <servlet-class>Controller.inputFO</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inputFO</servlet-name>
+        <url-pattern>/sifo/inputFO</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>inputDataCore</servlet-name>
+        <servlet-class>Controller.inputDataCore</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inputDataCore</servlet-name>
+        <url-pattern>/sifo/inputDataCore</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             -1

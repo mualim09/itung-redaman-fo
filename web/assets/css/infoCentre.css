@@ -25,3 +25,13 @@ div.sidebar{
 #wrapper.in {
     background-color: red;
 }
+
+.nav-second-level a{
+    background-color: whitesmoke !important;
+    color: red !important;
+}
+
+.nav-second-level a:hover{
+    background-color: red !important;
+    color: whitesmoke !important;
+}

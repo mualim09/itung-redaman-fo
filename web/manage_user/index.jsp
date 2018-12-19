@@ -195,6 +195,8 @@
 
         <script>
             $(function () {
+                
+                $('.modal').css('overflow', 'auto');
 
                 loadTableUser();
 

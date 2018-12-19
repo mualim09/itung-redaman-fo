@@ -1489,7 +1489,9 @@
 
         <script>
             $(function () {
-
+                
+                $('.modal').css('overflow', 'auto');
+                
                 var viewer = new TouchScroll();
                 viewer.init({
                     id: 'divTable',
