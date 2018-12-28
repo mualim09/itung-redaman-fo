@@ -14,13 +14,14 @@
     String name = request.getParameter("name");
     String phone = request.getParameter("phone");
     String email = request.getParameter("email");
+    String level = request.getParameter("level");
     
     String creator = (String) session.getAttribute(MySession.NIK);
     
     MyConnector con = new MyConnector();
     con.createConnection();
     
-    String query="UPDATE adm_user set `name`='"+name+"', phone='"+phone+"', email='"+email+"' WHERE nik='"+nik+"';";
+    String query="UPDATE adm_user set `name`='"+name+"', phone='"+phone+"', email='"+email+"', `level`='"+level+"' WHERE nik='"+nik+"';";
     boolean isOke = con.executeQuery(query);
     con.activitLog(creator, "adm_user", "Memperbarui data user "+nik);
     con.closeConnection();

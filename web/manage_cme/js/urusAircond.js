@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-function loadAircond(node){
-    var inData = {node:node};
+function loadAircond(node) {
+    var inData = {node: node};
     $.ajax({
         type: 'POST',
         data: inData,
@@ -37,8 +37,14 @@ $('#btnAddAC').on('click', function () {
 
     var inData = {
         type: $('#inACType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        jumlah: $('#inACJumlah').val(),
+        merk: $('#inACMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         kap: $('#inACKap').val(),
+        kon_freon: $('#inACFreon').val(),
+        tegTo: $('#inACTegTo').val(),
+        arusTo: $('#inACArusTo').val(),
+        temp: $('#inACTemp').val(),
+        klbm: $('#inACKlbm').val(),
+        ket: $('#inACKet').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         node: $('#contentCMENode').text()
     };
     var dialog = createLoadingDialog(null);
@@ -72,12 +78,18 @@ $('#tableAircond').on('click', '#btnEditModal', function () {
 
     var json = JSON.parse($(this).closest('td').find('#hidden').text());
     $('#inACKap').val(json.kap);
-    $('#inACJumlah').val(json.jumlah);
     $('#inACType').val(json.type);
+    $('#inACMerk').val(json.merk);
+    $('#inACFreon').val(json.kon_freon);
+    $('#inACTegTo').val(json.tegTo);
+    $('#inACArusTo').val(json.arusTo);
+    $('#inACTemp').val(json.temp);
+    $('#inACKlbm').val(json.klbm);
+    $('#inACKet').val(json.ket);
     $('#idAircond').val(json.id);
 });
 
-$('#btnEditAC').on('click', function(){
+$('#btnEditAC').on('click', function () {
     var $form = $('#formAircond');
     if (!$form[0].checkValidity()) {
         $('<input type="submit">').hide().appendTo($form).click().remove();
@@ -86,8 +98,14 @@ $('#btnEditAC').on('click', function(){
 
     var inData = {
         type: $('#inACType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        merk: $('#inACMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         kap: $('#inACKap').val(),
-        jumlah: $('#inACJumlah').val(),
+        kon_freon: $('#inACFreon').val(),
+        tegTo: $('#inACTegTo').val(),
+        arusTo: $('#inACArusTo').val(),
+        temp: $('#inACTemp').val(),
+        klbm: $('#inACKlbm').val(),
+        ket: $('#inACKet').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         node: $('#contentCMENode').text(),
         id: $('#idAircond').val()
     };

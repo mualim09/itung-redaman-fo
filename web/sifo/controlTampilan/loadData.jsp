@@ -15,32 +15,36 @@
     String core = request.getParameter("core");
     String periode = request.getParameter("periode");
 
-    String query = "SELECT pjg_kabel, tipe_kabel, jenis_kabel FROM tb_lokasi WHERE lokasi_sto='"+lokasi+"' AND core='"+core+"' AND tanggal LIKE '%"+periode+"';";
-    String panjang ="-";
-    String tipe ="-";
-    String jenis="-";
-    
+    String query = "SELECT pjg_kabel, tipe_kabel, jenis_kabel FROM tb_lokasi WHERE lokasi_sto='" + lokasi + "' AND core='" + core + "' AND tanggal LIKE '%" + periode + "';";
+    String panjang = "-";
+    String tipe = "-";
+    String jenis = "-";
+
     ArrayList<ArrayList<String>> arrKabel = con.getData(query);
-    
-    if(arrKabel.size()>0){
+
+    if (arrKabel.size() > 0) {
         panjang = arrKabel.get(0).get(0);
         tipe = arrKabel.get(0).get(1);
         jenis = arrKabel.get(0).get(2);
     }
-    
-    query = "SELECT core_awal, `user`, hasil_ukur, redaman, total_los, keterangan FROM tb_data WHERE core='"+core+"' AND tanggal LIKE '%"+periode+"';";
+
+    query = "SELECT core_awal, `user`, hasil_ukur, redaman, total_los, keterangan FROM tb_data WHERE core='" + core + "' AND tanggal LIKE '%" + periode + "';";
     arrKabel = con.getData(query);
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div class="col-md-4"><p>Panjang Kabel (Jarak): <b><%=panjang%></b></p></div>                        
-<div class="col-md-4"><p>Tipe Kabel: <b><%=tipe%></b></p></div>                        
-<div class="col-md-4"><p>Jenis Kabel : <b><%=jenis%></b></p></div>
 
 <div class="col-md-12">
     <div class="table-responsive">
-        <table class="table table-striped table-condensed table-bordered">
+        <table id="myTable" class="table table-striped table-condensed table-bordered">
             <thead>
+                <tr>
+                    <th colspan="6">
+                        <div class="col-md-4"><p>Panjang Kabel (Jarak): <b><%=panjang%></b></p></div>                        
+                        <div class="col-md-4"><p>Tipe Kabel: <b><%=tipe%></b></p></div>                        
+                        <div class="col-md-4"><p>Jenis Kabel : <b><%=jenis%></b></p></div>
+                    </th>
+                </tr>
                 <tr>
                     <th>Core Awal</th>
                     <th>User/Status</th>
@@ -52,7 +56,7 @@
             </thead>
             <tbody>
                 <%
-                    for(ArrayList<String> arr : arrKabel){
+                    for (ArrayList<String> arr : arrKabel) {
                 %>
                 <tr>
                     <td><%=arr.get(0)%></td>
@@ -70,3 +74,34 @@
 
     </div>
 </div>
+<script>
+    var exportTitle = 'Data Pengukuran FO Core <%=core%> Bulan <%=periode%>';
+    $("#myTable").DataTable({
+        dom: 'lBfrtip',
+        paging: false,
+        buttons: [
+            'colvis',
+            {
+                extend: 'excel',
+                title: exportTitle,
+                exportOptions: {
+                    columns: ':visible :not(.not-export)'
+                }
+            },
+            {
+                extend: 'csv',
+                title: exportTitle,
+                exportOptions: {
+                    columns: ':visible :not(.not-export)'
+                }
+            },
+            {
+                extend: 'print',
+                title: exportTitle,
+                exportOptions: {
+                    columns: ':visible :not(.not-export)'
+                }
+            }
+        ]
+    });
+</script>

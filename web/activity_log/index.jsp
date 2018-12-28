@@ -3,7 +3,13 @@
     Created on : Nov 23, 2018, 10:28:46 AM
     Author     : Lenovo
 --%>
-
+<%@page import="helper.MySession"%>
+<%
+    int userLevel = Integer.parseInt((String) session.getAttribute(MySession.USER_LEVEL));
+    if(userLevel >1){
+        response.sendRedirect("../sifo");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">

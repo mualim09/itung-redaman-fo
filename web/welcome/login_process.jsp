@@ -14,7 +14,7 @@
     String pwd = request.getParameter("pwd");
     String nik = request.getParameter("nik");
 
-    String query = "SELECT password, `name` FROM adm_user WHERE nik = '" + nik + "';";
+    String query = "SELECT password, `name`, `level` FROM adm_user WHERE nik = '" + nik + "';";
 
     MyConnector conn = new MyConnector();
     conn.createConnection();
@@ -50,8 +50,9 @@
     
     session.setAttribute(MySession.NAME, theName);
     session.setAttribute(MySession.NIK, nik);
+    session.setAttribute(MySession.USER_LEVEL, arrData.get(0).get(2));
     
-    json = basJ.getBasicJson(true, "../manage_user");
+    json = basJ.getBasicJson(true, "../sifo");
     out.print(json.toString());
     
     query = "INSERT INTO activity_log(nik,waktu,tabel,activity) VALUES('"+nik+"', now(), '-', 'Log masuk ke sistem.' );";

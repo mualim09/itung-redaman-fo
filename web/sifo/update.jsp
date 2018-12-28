@@ -35,7 +35,7 @@
             if (a != null && y != null) {
                 if (a != "" && y != "" ) {
                     try {
-                        String query = "UPDATE tb_data SET core_awal=?, user=?, hasil_ukur=?, redaman=?, total_los=?, keterangan=? where core_awal = '" + a + "' and tanggal = '" + y + "' ";
+                        String query = "UPDATE tb_data SET core_awal=?, user=?, hasil_ukur=?, redaman=?, total_los=?, keterangan=? where core='"+core+"' AND core_awal = '" + a + "' and tanggal = '" + y + "' ";
                         System.out.println(query);
                         ps = connection.prepareStatement(query);
                         ps.setString(1, a);

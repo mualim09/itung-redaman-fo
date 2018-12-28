@@ -7,6 +7,8 @@
 <%@page import="helper.MySession"%>
 <%
     String Name = (String) session.getAttribute(MySession.NAME);
+    String userLevel =(String) session.getAttribute(MySession.USER_LEVEL);
+    int intUserLevel = Integer.parseInt(userLevel);
 %>
 
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -46,12 +48,18 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
+                <%
+                    if(intUserLevel <= 1){
+                %>
                 <li>
                     <a href="../manage_user/"><i class="fa fa-users fa-fw"></i> Urus User</a>
                 </li>
                 <li>
                     <a href="../activity_log/"><i class="fa fa-book fa-fw"></i> Log Aktivitas</a>
                 </li>
+                <%
+                    }
+                %>
                 <li>
                     <a href="#"><i class="fa fa-arrows-h fa-fw"></i> siFO <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">

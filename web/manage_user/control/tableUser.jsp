@@ -11,7 +11,7 @@
 <%
     MyConnector con = new MyConnector();
     con.createConnection();
-    String query="Select nik, `name`, phone, email from adm_user;";
+    String query="Select nik, `name`, phone, email, `level` from adm_user;";
     ArrayList<ArrayList<String>> arrData = con.getData(query);
     con.closeConnection();
 %>
@@ -33,6 +33,7 @@
                 json.put("name", arr.get(1));
                 json.put("phone", arr.get(2));
                 json.put("email", arr.get(3));
+                json.put("level", arr.get(4));
         %>
         <tr>
             <td><%=arr.get(0)%></td>

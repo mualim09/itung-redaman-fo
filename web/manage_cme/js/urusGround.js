@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 
-function loadRectifier(node) {
+function loadGround(node) {
     var inData = {node: node};
     $.ajax({
         type: 'POST',
         data: inData,
         timeout: 60000,
-        url: "control/loadCMERectifier.jsp",
+        url: "control/loadGround.jsp",
         success: function (data, textStatus, jqXHR) {
-            $('#tableRectifier').find('tbody').html(data);
+            $('#tableGround').find('tbody').html(data);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(errorThrown);
@@ -20,43 +20,39 @@ function loadRectifier(node) {
     });
 }
 
-$('#btnAddRectifierModal').on('click', function () {
-    var $modal = $('#modalRectifier');
+$('#btnAddGroundModal').on('click', function () {
+    var $modal = $('#modalGround');
     $modal.modal('show');
     $modal.find('.btn').hide();
-    $('#btnAddRec').show();
-    $('#formRectier')[0].reset();
+    $('#btnAddGround').show();
+    $('#formGround')[0].reset();
 });
 
-$('#btnAddRec').on('click', function () {
-    var $form = $('#formRectier');
+$('#btnAddGround').on('click', function () {
+    var $form = $('#formGround');
     if (!$form[0].checkValidity()) {
         $('<input type="submit">').hide().appendTo($form).click().remove();
         return;
     }
 
     var inData = {
-        type: $('#inRecType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        merk: $('#inRecMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        ket: $('#inRecKet').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        kap: $('#inRecKap').val(),
-        ter: $('#inRecTer').val(),
-        tegTo: $('#inRecTegTo').val(),
-        arusTo: $('#inRecArusTo').val(),
+        ground: $('#inGroundName').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        tahan: $('#inGroundTahan').val(),
+        beda: $('#inGroundBeda').val(),
         node: $('#contentCMENode').text()
     };
     var dialog = createLoadingDialog(null);
     $.ajax({
         type: 'POST',
         data: inData,
-        url: "control/addRectifier.jsp",
+        url: "control/addGround.jsp",
         dataType: 'json',
         timeout: 60000,
         success: function (data, textStatus, jqXHR) {
             bootbox.alert(data.msg);
             if (data.isValid) {
-                loadRectifier(inData.node);
-                $('#modalRectifier').modal('hide');
+                loadGround(inData.node);
+                $('#modalGround').modal('hide');
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -68,53 +64,45 @@ $('#btnAddRec').on('click', function () {
     });
 });
 
-$('#tableRectifier').on('click', '#btnEditModal', function () {
-    var $modal = $('#modalRectifier');
+$('#tableGround').on('click', '#btnEditModal', function () {
+    var $modal = $('#modalGround');
     $modal.modal('show');
     $modal.find('.btn').hide();
-    $('#btnEditRec').show();
+    $('#btnEditGround').show();
 
     var json = JSON.parse($(this).closest('td').find('#hidden').text());
-    $('#inRecKap').val(json.kap);
-    $('#inRecTer').val(json.ter);
-    $('#inRecType').val(json.type);
-    $('#idRectifier').val(json.id);
-    $('#inRecMerk').val(json.merk);
-    $('#inRecArusTo').val(json.arusTo);
-    $('#inRecTegTo').val(json.tegTo);
-    $('#inRecKet').val(json.ket);
+    $('#inGroundName').val(json.grounding);
+    $('#inGroundTahan').val(json.tahanan);
+    $('#inGroundBeda').val(json.beda);
+    $('#idGround').val(json.id);
 });
 
-$('#btnEditRec').on('click', function(){
-    var $form = $('#formRectier');
+$('#btnEditGround').on('click', function () {
+    var $form = $('#formGround');
     if (!$form[0].checkValidity()) {
         $('<input type="submit">').hide().appendTo($form).click().remove();
         return;
     }
 
     var inData = {
-        type: $('#inRecType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        merk: $('#inRecMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        ket: $('#inRecKet').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        kap: $('#inRecKap').val(),
-        ter: $('#inRecTer').val(),
-        tegTo: $('#inRecTegTo').val(),
-        arusTo: $('#inRecArusTo').val(),
+        ground: $('#inGroundName').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        tahan: $('#inGroundTahan').val(),
+        beda: $('#inGroundBeda').val(),
         node: $('#contentCMENode').text(),
-        id: $('#idRectifier').val()
+        id: $('#idGround').val()
     };
     var dialog = createLoadingDialog(null);
     $.ajax({
         type: 'POST',
         data: inData,
-        url: "control/editRectifier.jsp",
+        url: "control/editGround.jsp",
         dataType: 'json',
         timeout: 60000,
         success: function (data, textStatus, jqXHR) {
             bootbox.alert(data.msg);
             if (data.isValid) {
-                loadRectifier(inData.node);
-                $('#modalRectifier').modal('hide');
+                loadGround(inData.node);
+                $('#modalGround').modal('hide');
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -126,11 +114,11 @@ $('#btnEditRec').on('click', function(){
     });
 });
 
-$('#tableRectifier').on('click', '#btnDelete', function () {
+$('#tableGround').on('click', '#btnDelete', function () {
 
     var json = JSON.parse($(this).closest('td').find('#hidden').text());
     bootbox.confirm({
-        message: "Anda yakin ingin menghapus rectifier " + json.type + "?",
+        message: "Anda yakin ingin menghapus grounding " + json.grounding + "?",
         buttons: {
             confirm: {
                 label: 'Yes',
@@ -150,13 +138,13 @@ $('#tableRectifier').on('click', '#btnDelete', function () {
             $.ajax({
                 type: 'POST',
                 data: json,
-                url: "control/deleteRectifier.jsp",
+                url: "control/deleteGround.jsp",
                 dataType: 'json',
                 timeout: 60000,
                 success: function (data, textStatus, jqXHR) {
                     bootbox.alert(data.msg);
                     if (data.isValid) {
-                        loadRectifier(json.node);
+                        loadGround(json.node);
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -169,3 +157,5 @@ $('#tableRectifier').on('click', '#btnDelete', function () {
         }
     });
 });
+
+

@@ -33,21 +33,10 @@
             <%
                 String core = request.getParameter("core");
                 String lokasi = request.getParameter("lokasi_sto");
-                try {
-                    Connection connection = null;
-                    Statement statement = null;
-                    ResultSet rs = null;
-                    MyConnector connector = new MyConnector();
-                    connector.createConnection();
-                    connection = connector.getConnection();
-                    statement = connection.createStatement();
-                    String Data = "select * from tb_lokasi WHERE lokasi_sto='"+lokasi+"' group by lokasi_sto";
-
-                    rs = statement.executeQuery(Data);
+                
             %>
 
-            <%  while (rs.next()) {
-            %>
+           
 
             <!-- Page Content -->
             <div id="page-wrapper">
@@ -70,9 +59,9 @@
                                 <fieldset>
                                     <!--<input type="text" name="nomor" value ="0" hidden>-->   
                                     <font color="black">Lokasi Witel</font>
-                                    <input type="text" name="lokasi_witel" value="<%=rs.getString("lokasi_witel")%>" required>             
+                                    <input type="text" name="lokasi_witel" value="Tasikmalaya" required>             
                                     <font color="black">Lokasi STO</font>
-                                    <input type="text" name="lokasi_sto" value="<%=rs.getString("lokasi_sto")%>" required>
+                                    <input type="text" name="lokasi_sto" value="<%=lokasi%>" required>
                                     <font color="black">Core Awal-Akhir</font>
                                     <input type="text" name="core" required>   
                                     <font color="black">Panjang Kabel</font>
@@ -90,17 +79,7 @@
                             </form> 
                         </div>
                         
-                        <%   }
-                        %> 
-
-                        <%
-                                rs.close();
-                                statement.close();
-                                connection.close();
-                            } catch (Exception ex) {
-                                out.println("Can't connect to database.");
-                            }
-                        %>
+                       
 
                     </div>
                 </div>

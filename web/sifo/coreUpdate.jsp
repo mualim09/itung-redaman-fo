@@ -49,7 +49,7 @@
                 statement = connection.createStatement();
                 statement = connection.createStatement();
 
-                String Data = "select * from tb_data where core_awal = '" + core_awal + "' and tanggal = '" + tanggal + "' ";
+                String Data = "select * from tb_data where core_awal = '" + core_awal + "' and tanggal = '" + tanggal + "' AND core='"+core+"' ";
                 rs = statement.executeQuery(Data);
 
         %> 

@@ -15,6 +15,8 @@
             String c = request.getParameter("pjg_kabel");
             String d = request.getParameter("tipe_kabel");
             String e = request.getParameter("jenis_kabel");
+            String f = request.getParameter("tanggal");
+            String g = request.getParameter("tanggal_baru");
 
             System.out.println(request.getParameterMap());
             
@@ -27,10 +29,10 @@
             PreparedStatement ps = null; 
             
             int updateQuery = 0;
-            if (a != null && b != null && c != null && d != null && e != null) {
-                if (a != "" && b != "" && c != "" && d != "" && e != "" ) {
+            if (a != null && b != null && c != null && d != null && e != null && f != null) {
+                if (a != "" && b != "" && c != "" && d != "" && e != "" && f != "" ) {
                     try {
-                        String query = "UPDATE tb_lokasi SET lokasi_sto=?, core=?, pjg_kabel=?, tipe_kabel=?, jenis_kabel=? where core = '" + b + "' ";
+                        String query = "UPDATE tb_lokasi SET lokasi_sto=?, core=?, pjg_kabel=?, tipe_kabel=?, jenis_kabel=?, tanggal=? where core = '" + b + "' ";
                         System.out.println(query);
                         ps = connection.prepareStatement(query);
                         ps.setString(1, a);
@@ -38,7 +40,14 @@
                         ps.setString(3, c);
                         ps.setString(4, d);
                         ps.setString(5, e);
-
+                        ps.setString(6, g);
+                        System.out.println(ps.toString());
+                        updateQuery = ps.executeUpdate();
+                        
+                        String query2 = "UPDATE tb_data set tanggal=? WHERE tanggal='"+f+"' AND core='"+b+"';";
+                        ps = connection.prepareStatement(query2);
+                        ps.setString(1, g);
+                        System.out.println(ps.toString());
                         updateQuery = ps.executeUpdate();
                         if (updateQuery != 0) {
                             out.println("Updated");

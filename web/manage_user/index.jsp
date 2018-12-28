@@ -3,7 +3,13 @@
     Created on : Nov 23, 2018, 10:28:46 AM
     Author     : Lenovo
 --%>
-
+<%@page import="helper.MySession"%>
+<%
+    int userLevel = Integer.parseInt((String) session.getAttribute(MySession.USER_LEVEL));
+    if(userLevel >1){
+        response.sendRedirect("../sifo");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -120,6 +126,18 @@
 
                                     </div>
                                 </div>
+                                
+                                 <!-- Password input-->
+                                <div class="form-group ">
+                                    <label class="col-md-4 control-label" for="inPwd2">Jenis User</label>
+                                    <div class="col-md-6">
+                                        <select id="inLevel"class="form-control input-md" required="">
+                                            <option value="2">Biasa</option>
+                                            <option value="1">Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+
 
                             </fieldset>
                         </form>
@@ -174,7 +192,8 @@
 
                                     </div>
                                 </div>
-
+                                
+                               
                             </fieldset>
                         </form>
 
@@ -253,6 +272,7 @@
                         var $name = $('#inName');
                         var $phone = $('#inPhone');
                         var $email = $('#inEmail');
+                        var $level = $('#inLevel');
 
                         var name = $name.val();
                         name = name.replace(/'/g, "\\\'").replace(/"/g, "\\\"");
@@ -262,7 +282,8 @@
                             name: name,
                             phone: $phone.val(),
                             email: $email.val(),
-                            pwd: $pwd1.val()
+                            pwd: $pwd1.val(),
+                            level: $level.val()
                         };
 
                         var dialog = bootbox.dialog({
@@ -311,6 +332,7 @@
                     $('#inName').val(obj.name);
                     $('#inPhone').val(obj.phone);
                     $('#inEmail').val(obj.email);
+                    $('#inLevel').val(obj.level);
                 });
 
                 $('#btnUpdateUser').on('click', function () {
@@ -322,7 +344,8 @@
                             name: name,
                             nik: $('#inNIK').val(),
                             phone: $('#inPhone').val(),
-                            email: $('#inEmail').val()
+                            email: $('#inEmail').val(),
+                            level: $('#inLevel').val()
                         };
                         var dialog = bootbox.dialog({
                             message: '<p class="text-center"><i class="fa fa-spin fa-spinner"></i> Loading...</p>',

@@ -11,15 +11,22 @@
 <%@page import="dbcon.MyConnector"%>
 <%
     String node = request.getParameter("node");
-    String jumlah = request.getParameter("jumlah");
     String kap = request.getParameter("kap");
     String type = request.getParameter("type");
+    String merk = request.getParameter("merk");
+    String kon_freon = request.getParameter("kon_freon");
+    String tegTo = request.getParameter("tegTo");
+    String arusTo = request.getParameter("arusTo");
+    String temp = request.getParameter("temp");
+    String klbm = request.getParameter("klbm");
+    String ket = request.getParameter("ket");
     String id = request.getParameter("id");
     String witel = "TASIKMALAYA";
     
     String nik = (String) session.getAttribute(MySession.NIK);
 
-    String query = "UPDATE cme_air_conditioner set `type`='"+type+"', kap="+kap+" , jumlah="+jumlah+" WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
+    String query = "UPDATE cme_air_conditioner set `type`='"+type+"', merk='"+merk+"', kap="+kap+" , kon_freon="+kon_freon+", `tegTo`="+tegTo+", `arusTo`="+arusTo+", temp="+temp+", klbm="+klbm+", ket='"+ket+"'"
+            + " WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
     MyConnector con = new MyConnector();
     con.createConnection();
     

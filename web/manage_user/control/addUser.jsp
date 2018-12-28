@@ -14,6 +14,8 @@
     String name = request.getParameter("name");
     String email = request.getParameter("email");
     String phone = request.getParameter("phone");
+    String pwd = request.getParameter("pwd");
+    String level = request.getParameter("level");
     
     MyConnector con = new MyConnector();
     con.createConnection();
@@ -34,7 +36,7 @@
     
     String creator = (String) session.getAttribute(MySession.NIK);
     
-    query="INSERT INTO adm_user(nik, `name`, phone, email, created_date) VALUES('"+nik+"', '"+name+"', '"+phone+"', '"+email+"', now());";
+    query="INSERT INTO adm_user(nik, `name`, phone, email, created_date, `password`, `level`) VALUES('"+nik+"', '"+name+"', '"+phone+"', '"+email+"', now(), '"+pwd+"', '"+level+"');";
     boolean isOke = con.executeQuery(query);
     query = "INSERT INTO activity_log(nik,waktu,tabel,activity) VALUES('"+creator+"', now(), 'adm_user', 'Menambahkan user "+nik+"' );";
     con.executeQuery(query);

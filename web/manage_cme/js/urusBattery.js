@@ -36,8 +36,15 @@ $('#btnAddBat').on('click', function () {
 
     var inData = {
         type: $('#inBatType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
-        bank: $('#inBatBank').val(),
+        merk: $('#inBatMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         kap: $('#inBatKap').val(),
+        suhu: $('#inBatSuhu').val(),
+        bj: $('#inBatBJ').val(),
+        casing: $('#inBatCasing').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        kutub: $('#inBatKutub').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        tegCell: $('#inBatTegCell').val(),
+        tegBank: $('#inBatTegBank').val(),
+        ket: $('#inBatKet').val(),
         node: $('#contentCMENode').text()
     };
     var dialog = createLoadingDialog(null);
@@ -71,8 +78,15 @@ $('#tableBattery').on('click', '#btnEditModal', function () {
 
     var json = JSON.parse($(this).closest('td').find('#hidden').text());
     $('#inBatKap').val(json.kap);
-    $('#inBatBank').val(json.bank);
     $('#inBatType').val(json.type);
+    $('#inBatMerk').val(json.merk);
+    $('#inBatSuhu').val(json.suhu);
+    $('#inBatBJ').val(json.bj);
+    $('#inBatCasing').val(json.casing);
+    $('#inBatKutub').val(json.kutub);
+    $('#inBatTegCell').val(json.tegCell);
+    $('#inBatTegBank').val(json.tegBank);
+    $('#inBatKet').val(json.ket);
     $('#idBattery').val(json.id);
 });
 
@@ -85,8 +99,15 @@ $('#btnEditBat').on('click', function(){
 
     var inData = {
         type: $('#inBatType').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        merk: $('#inBatMerk').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
         kap: $('#inBatKap').val(),
-        bank: $('#inBatBank').val(),
+        suhu: $('#inBatSuhu').val(),
+        bj: $('#inBatBJ').val(),
+        casing: $('#inBatCasing').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        kutub: $('#inBatKutub').val().replace(/'/g, "\\\'").replace(/"/g, "\\\""),
+        tegCell: $('#inBatTegCell').val(),
+        tegBank: $('#inBatTegBank').val(),
+        ket: $('#inBatKet').val(),
         node: $('#contentCMENode').text(),
         id: $('#idBattery').val()
     };

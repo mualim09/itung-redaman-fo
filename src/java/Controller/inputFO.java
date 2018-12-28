@@ -62,7 +62,7 @@ public class inputFO extends HttpServlet {
         UserAccess access = new UserAccess();
         if (access.inputFO(lokasi_witel, lokasi_sto, core, pjg_kabel, tipe_kabel, jenis_kabel, tanggal)) {
             out.print("Behasil Insert");
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("index_sto.jsp?lokasi_sto="+lokasi_sto);
         } else {
             response.sendRedirect("inputFO.jsp");
             out.print("Gagal Insert");

@@ -67,15 +67,15 @@
 
                             rs = statement.executeQuery(Data);
                     %>
-                        <h4 class="pull-right">
-                            <a href="dataCore.jsp?core=<%=core%>&&lokasi_sto=<%=lokasi%>"><button class="btn btn-success">Kembali</button></a>
-                        </h4>
+                    <h4 class="pull-right">
+                        <a href="dataCore.jsp?core=<%=core%>&&lokasi_sto=<%=lokasi%>"><button class="btn btn-success">Kembali</button></a>
+                    </h4>
                     <%  while (rs.next()) {
                     %>
 
                     <!-- /.row -->
                     <div class="row">
-                        
+
                         <%   }
                         %> 
 
@@ -90,7 +90,8 @@
 
                         <div class="register">
                             <form action="inputDataCore" class="form-style-5" method="post" >
-                            <fieldset>
+                                <fieldset>
+                                    <input type="hidden" name="lokasi_sto" value="<%=lokasi%>">
                                     <input type="text" name="tanggal" value ="<%=request.getParameter("tanggal")%>" hidden> 
                                     <!--<font color="black">Core-Akhir</font>-->
                                     <input type="text" name="core" value ="<%=request.getParameter("core")%>" hidden> 
@@ -148,9 +149,9 @@
         <script src="../assets/js/bootbox.min.js"></script>
 
         <script>
-                                function goBack() {
-                                    window.history.back();
-                                }
+            function goBack() {
+                window.history.back();
+            }
         </script>
     </body>
 </html>

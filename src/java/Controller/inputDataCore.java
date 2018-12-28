@@ -54,7 +54,8 @@ public class inputDataCore extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-
+        
+        String lokasi = request.getParameter("lokasi_sto");
         String tanggal = request.getParameter("tanggal");
         String core = request.getParameter("core");
         String core_awal = request.getParameter("core_awal");
@@ -66,9 +67,9 @@ public class inputDataCore extends HttpServlet {
 
         UserAccess access = new UserAccess();
         if (access.inputDataCore(tanggal, core, core_awal, user, hasil_ukur, redaman, total_los, keterangan)) {
-            response.sendRedirect("inputDataCore.jsp?tanggal="+tanggal+"&&core=" +core+"&status=berhasil");
+            response.sendRedirect("inputDataCore.jsp?tanggal="+tanggal+"&&lokasi_sto="+lokasi+"&&core=" +core+"&status=berhasil");
         } else {
-            response.sendRedirect("inputDataCore.jsp?tanggal="+tanggal+"&&core=" +core+"&status=gagal");
+            response.sendRedirect("inputDataCore.jsp?tanggal="+tanggal+"&&lokasi_sto="+lokasi+"&&core=" +core+"&status=gagal");
         }
     }
 

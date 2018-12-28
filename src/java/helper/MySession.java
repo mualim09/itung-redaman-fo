@@ -13,4 +13,6 @@ public class MySession {
     public static final String NAME = "NAME";
     public static final String NIK = "NIK";
     public static final String SUPERUSER = "SUPERUSER";
+    public static final String USER_LEVEL = "USER_LEVEL";
+    
 }

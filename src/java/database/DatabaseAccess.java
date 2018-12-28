@@ -8,7 +8,7 @@ public class DatabaseAccess {
     private static DatabaseAccess _instance;
     private static final String driver = "com.mysql.jdbc.Driver";
     private static final String username = "root";
-    private static final String password = "";
+    private static final String password = "qwerty";
     private static final String url = "jdbc:mysql://localhost:3306/tsm_infocentre?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
     private static Connection conn;

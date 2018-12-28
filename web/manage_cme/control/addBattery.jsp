@@ -11,14 +11,22 @@
 <%@page import="dbcon.MyConnector"%>
 <%
     String node = request.getParameter("node");
-    String bank = request.getParameter("bank");
     String kap = request.getParameter("kap");
     String type = request.getParameter("type");
+    String merk = request.getParameter("merk");
+    String suhu = request.getParameter("suhu");
+    String bj = request.getParameter("bj");
+    String casing = request.getParameter("casing");
+    String kutub = request.getParameter("kutub");
+    String tegCell = request.getParameter("tegCell");
+    String tegBank = request.getParameter("tegBank");
+    String ket = request.getParameter("ket");
     String witel = "TASIKMALAYA";
     
     String nik = (String) session.getAttribute(MySession.NIK);
 
-    String query = "INSERT INTO cme_battery(witel, node, `type`, kap, bank) VALUES('"+witel+"', '"+node+"', '"+type+"', "+kap+" , "+bank+" )";
+    String query = "INSERT INTO cme_battery(witel, node, `type`, kap, merk, suhu, bj, casing, kutub, `tegCell`, `tegBank`, ket) "
+            + "VALUES('"+witel+"', '"+node+"', '"+type+"', "+kap+" , '"+merk+"', "+suhu+", "+bj+", '"+casing+"', '"+kutub+"', "+tegCell+", "+tegBank+", '"+ket+"' )";
     MyConnector con = new MyConnector();
     con.createConnection();
     

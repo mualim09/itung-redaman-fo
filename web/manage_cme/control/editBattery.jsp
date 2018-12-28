@@ -11,15 +11,23 @@
 <%@page import="dbcon.MyConnector"%>
 <%
     String node = request.getParameter("node");
-    String bank = request.getParameter("bank");
     String kap = request.getParameter("kap");
     String type = request.getParameter("type");
+    String merk = request.getParameter("merk");
+    String suhu = request.getParameter("suhu");
+    String bj = request.getParameter("bj");
+    String casing = request.getParameter("casing");
+    String kutub = request.getParameter("kutub");
+    String tegCell = request.getParameter("tegCell");
+    String tegBank = request.getParameter("tegBank");
+    String ket = request.getParameter("ket");
     String id = request.getParameter("id");
     String witel = "TASIKMALAYA";
     
     String nik = (String) session.getAttribute(MySession.NIK);
 
-    String query = "UPDATE cme_battery set `type`='"+type+"', kap="+kap+" , bank="+bank+" WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
+    String query = "UPDATE cme_battery set `type`='"+type+"', kap="+kap+" , merk='"+merk+"', suhu="+suhu+", bj="+bj+", casing='"+casing+"', kutub='"+kutub+"', `tegCell`="+tegCell+", `tegBank`="+tegBank+", ket='"+ket+"' "
+            + "WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
     MyConnector con = new MyConnector();
     con.createConnection();
     

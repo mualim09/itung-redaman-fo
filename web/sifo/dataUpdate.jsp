@@ -79,7 +79,7 @@
                     <!-- /.row -->
                     <div class="row">
 
-                        <form action="updateData.jsp?tanggal=core=<%=rs.getString("core")%>" method="POST">
+                        <form action="updateData.jsp?tanggal=<%=rs.getString("tanggal")%>&&core=<%=rs.getString("core")%>" method="POST">
                             <center><table class="tg">
                                     <tr>
                                         <th class="tg-0lax">Lokasi SB</th>
@@ -107,67 +107,72 @@
                                             <input type="text" name="jenis_kabel" value='<%=rs.getString("jenis_kabel")%>'/></td>
                                     </tr>
                                     <tr>
+                                        <th class="tg-0lax">Tanggal</th>
+                                        <td class="tg-yw4l">
+                                            <input type="text" name="tanggal_baru" value='<%=rs.getString("tanggal")%>'/></td>
+                                    </tr>
+                                    <tr>
                                         <th colspan="2"><input type="submit" class="btn btn-success" value="UPDATE"></th>
                                     </tr>
 
-                                    <input type="hidden" name="core" value='<%=rs.getString("core")%>' />
-                                    <input type="hidden" name="tanggal" value='<%=rs.getString("core_awal")%>' />    
+                                    <input type="hidden" name="core" value='<%=rs.getString("core")%>' />   
                                     <input type="hidden" name="core_awal" value='<%=rs.getString("core_awal")%>' />
 
                                     </tr>
-                                </table>
+                                </table></center>
+                        </form>
 
-                                <%   }
-                                %> 
+                        <%   }
+                        %> 
 
-                                <%
-                                        rs.close();
-                                        statement.close();
-                                        connection.close();
-                                    } catch (Exception ex) {
-                                        out.println("Can't connect to database.");
-                                    }
-                                %>
+                        <%
+                                rs.close();
+                                statement.close();
+                                connection.close();
+                            } catch (Exception ex) {
+                                out.println("Can't connect to database.");
+                            }
+                        %>
 
-                                </div>
-                                </div>
-                                <!-- /.container-fluid -->
-                                </div>
-                                <!-- /#page-wrapper -->
-                                </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
 
 
 
-                                <!-- jQuery -->
-                                <script src="../vendor/jquery/jquery.min.js"></script>
+        <!-- jQuery -->
+        <script src="../vendor/jquery/jquery.min.js"></script>
 
-                                <!-- Bootstrap Core JavaScript -->
-                                <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-                                <!-- Metis Menu Plugin JavaScript -->
-                                <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
-                                <!-- Custom Theme JavaScript -->
+        <!-- Custom Theme JavaScript -->
 
-                                <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
-                                <script src="../assets/Buttons-1.5.4/js/dataTables.buttons.js"></script>
-                                <script src="../assets/JSZip-2.5.0/jszip.min.js"></script>
-                                <script src="../assets/pdfmake-0.1.36/pdfmake.min.js"></script>
-                                <script src="../assets/pdfmake-0.1.36/vfs_fonts.js"></script>
-                                <script src="../assets/Buttons-1.5.4/js/buttons.html5.min.js"></script>        
-                                <script src="../assets/Buttons-1.5.4/js/buttons.flash.min.js"></script>        
-                                <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-                                <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
-                                <script src="../assets/Buttons-1.5.4/js/buttons.colVis.min.js"></script>
-                                <script src="../assets/Buttons-1.5.4/js/buttons.print.min.js"></script>
-                                <script src="../dist/js/sb-admin-2.js"></script>
-                                <script src="../assets/js/rd.validator.js"></script>
-                                <script src="../assets/js/bootbox.min.js"></script>
+        <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/dataTables.buttons.js"></script>
+        <script src="../assets/JSZip-2.5.0/jszip.min.js"></script>
+        <script src="../assets/pdfmake-0.1.36/pdfmake.min.js"></script>
+        <script src="../assets/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/buttons.html5.min.js"></script>        
+        <script src="../assets/Buttons-1.5.4/js/buttons.flash.min.js"></script>        
+        <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+        <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/buttons.colVis.min.js"></script>
+        <script src="../assets/Buttons-1.5.4/js/buttons.print.min.js"></script>
+        <script src="../dist/js/sb-admin-2.js"></script>
+        <script src="../assets/js/rd.validator.js"></script>
+        <script src="../assets/js/bootbox.min.js"></script>
 
-                                <script>
-                                function goBack() {
-                                    window.history.back();
-                                }
-                                </script>
-                                </body>
-                                </html>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>

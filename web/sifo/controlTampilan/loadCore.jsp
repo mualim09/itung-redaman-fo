@@ -15,7 +15,7 @@
     String witel="TASIKMALAYA";
     String lokasi = request.getParameter("lokasi");
     
-    String query="SELECT core FROM tb_lokasi WHERE lokasi_sto='"+lokasi+"' AND lokasi_witel='"+witel+"';";
+    String query="SELECT distinct(core) FROM tb_lokasi WHERE lokasi_sto='"+lokasi+"' AND lokasi_witel='"+witel+"';";
     
     ArrayList<ArrayList<String>> arr = con.getData(query);
     

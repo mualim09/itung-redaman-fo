@@ -2028,7 +2028,7 @@
                         lama = $lama.val();
                     
                     if($baru != null)
-                        baru = $baru != null;
+                        baru = $baru.val();
 
                     var inData = {
                         lama: lama,

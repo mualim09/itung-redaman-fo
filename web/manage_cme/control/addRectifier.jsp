@@ -14,11 +14,16 @@
     String ter = request.getParameter("ter");
     String kap = request.getParameter("kap");
     String type = request.getParameter("type");
+    String merk = request.getParameter("merk");
+    String ket = request.getParameter("ket");
+    String tegTo = request.getParameter("tegTo");
+    String arusTo = request.getParameter("arusTo");
     String witel = "TASIKMALAYA";
     
     String nik = (String) session.getAttribute(MySession.NIK);
 
-    String query = "INSERT INTO cme_rectifier(witel, node, `type`, kap, terpakai) VALUES('"+witel+"', '"+node+"', '"+type+"', "+kap+" , "+ter+" )";
+    String query = "INSERT INTO cme_rectifier(witel, node, `type`, kap, terpakai, `tegTo`, `arusTo`, merk, ket) "
+            + "VALUES('"+witel+"', '"+node+"', '"+type+"', "+kap+" , "+ter+", "+tegTo+", "+arusTo+", '"+merk+"', '"+ket+"' )";
     MyConnector con = new MyConnector();
     con.createConnection();
     

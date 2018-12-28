@@ -15,11 +15,16 @@
     String kap = request.getParameter("kap");
     String type = request.getParameter("type");
     String id = request.getParameter("id");
+    String merk = request.getParameter("merk");
+    String ket = request.getParameter("ket");
+    String tegTo = request.getParameter("tegTo");
+    String arusTo = request.getParameter("arusTo");
     String witel = "TASIKMALAYA";
     
     String nik = (String) session.getAttribute(MySession.NIK);
 
-    String query = "UPDATE cme_rectifier set `type`='"+type+"', kap="+kap+" , terpakai="+ter+" WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
+    String query = "UPDATE cme_rectifier set `type`='"+type+"', kap="+kap+" , terpakai="+ter+", `merk`='"+merk+"', `arusTo`="+arusTo+", `tegTo`="+tegTo+", ket='"+ket+"'"
+            + "WHERE witel='"+witel+"' AND node='"+node+"' AND `Id`="+id+" ;";
     MyConnector con = new MyConnector();
     con.createConnection();
     

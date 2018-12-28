@@ -104,9 +104,14 @@
                                         <table id="tableRectifier" class="table table-light table-striped">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
+                                                    <th>Merk</th>
                                                     <th>Type</th>
-                                                    <th>Kap</th>
-                                                    <th>Terpakai</th>
+                                                    <th>Kapasitas (A)</th>
+                                                    <th>Terpakai (A)</th>
+                                                    <th>Tegangan Total (Volt)</th>
+                                                    <th>Arus Total (Adc)</th>
+                                                    <th>Keterangan</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -140,9 +145,17 @@
                                         <table id="tableBattery" class="table table-light table-striped">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
+                                                    <th>Merk</th>
                                                     <th>Type</th>
-                                                    <th>Bank</th>
                                                     <th>Kap (AMPER HOUR)</th>
+                                                    <th>Suhu Elektrolit (&deg;C)</th>
+                                                    <th>Beraj Jenis Elektrolit</th>
+                                                    <th>Kondisi Casing</th>
+                                                    <th>Kondisi Kutub</th>
+                                                    <th>Tegangan Cell (Volt)</th>
+                                                    <th>Tegangan Bank (Volt)</th>
+                                                    <th>Keterangan (Volt)</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -176,9 +189,53 @@
                                         <table id="tableAircond" class="table table-light table-striped">
                                             <thead>
                                                 <tr>
+                                                    <th>No</th>
+                                                    <th>Merk</th>
                                                     <th>Type</th>
-                                                    <th>Kap (PK)</th>
-                                                    <th>Jumlah</th>
+                                                    <th>Kapasitas (PK)</th>
+                                                    <th>Kondisi Freon (psi)</th>
+                                                    <th>Tegangan Total</th>
+                                                    <th>Arus Total</th>
+                                                    <th>Temperatur (&deg;C)</th>
+                                                    <th>Kelembapan</th>
+                                                    <th>Keterangan</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <button title="Edit data" class="btn btn-default"><i class="fa fa-edit"></i></button> 
+                                                        <button title="Hapus data" class="btn btn-danger"><i class="fa fa-trash"></i></button> 
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.row-->
+                        
+                        <div class="row">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">Grounding</div>
+                                <div class="panel-body">
+                                    <p class="pull-right">
+                                        <button id="btnAddGroundModal" title="Tambah AC" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button>
+                                    </p>
+                                    <div class="table-responsive">
+                                        <table id="tableGround" class="table table-light table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Grounding</th>
+                                                    <th>Tahanan (Ohm)</th>
+                                                    <th>Beda Potensial (Volt AC/DC)</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -398,9 +455,18 @@
                                 
                                 <!-- Text input-->
                                 <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Merk</label>  
+                                    <div class="col-md-6">
+                                        <input id="inRecMerk" name="inRecMerk" type="text"  class="form-control input-md" required="" maxlength="200" >
+
+                                    </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Type</label>  
                                     <div class="col-md-6">
-                                        <input id="inRecType" name="textinput" type="text"  class="form-control input-md" required="" maxlength="200" >
+                                        <input id="inRecType" name="inRecType" type="text"  class="form-control input-md" required="" maxlength="200" >
 
                                     </div>
                                 </div>
@@ -409,7 +475,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Kapasitas (Amper)</label>  
                                     <div class="col-md-6">
-                                        <input id="inRecKap" name="textinput" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+                                        <input id="inRecKap" name="inRecKap" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
 
                                     </div>
                                 </div>
@@ -418,7 +484,34 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Terpakai (Amper)</label>  
                                     <div class="col-md-6">
-                                        <input id="inRecTer" name="textinput" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+                                        <input id="inRecTer" name="inRecTer" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                 
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Tegangan Total (Amper)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inRecTegTo" name="inRecTegTo" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                   
+                                  <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Arus Total (Adc)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inRecArusTo" name="inRecArusTo" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>   
+                                  
+                                  <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Keterangan</label>  
+                                    <div class="col-md-6">
+                                        <textarea id="inRecKet" name="inRecKet" class="form-control input-md" required="" maxlength="500" ></textarea>
 
                                     </div>
                                 </div>
@@ -451,33 +544,95 @@
                             <fieldset>
                                 <input type="hidden" id="idBattery">
                                 
+                                 <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Merk</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatMerk" name="inBatMerk" type="text"  class="form-control input-md" required="" maxlength="200" >
+
+                                    </div>
+                                </div>
+                                 
                                 <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Type</label>  
                                     <div class="col-md-6">
-                                        <input id="inBatType" name="textinput" type="text"  class="form-control input-md" required="" maxlength="200" >
+                                        <input id="inBatType" name="inBatType" type="text"  class="form-control input-md" required="" maxlength="200" >
 
                                     </div>
-                                </div>
-                                
-                                 <!-- Text input-->
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" for="textinput">Bank</label>  
-                                    <div class="col-md-6">
-                                        <input id="inBatBank" name="textinput" type="number"  class="form-control input-md" required="" max="9999" min="0" step="1" >
-
-                                    </div>
-                                </div>
+                                </div>                                
                                  
                                  <!-- Text input-->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Kapasitas (Amper Hour)</label>  
                                     <div class="col-md-6">
-                                        <input id="inBatKap" name="textinput" type="number"  class="form-control input-md" required="" max="99999.99" min="0" step="0.01" >
+                                        <input id="inBatKap" name="inBatKap" type="number"  class="form-control input-md" required="" max="99999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                 
+                                  <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Suhu Elektrolit (&deg;C)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatSuhu" name="inBatSuhu" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                  
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Berat Jenis Elektrolit</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatBJ" name="inBatBJ" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                   
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Kondisi Casing</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatCasing" name="inBatCasing" type="text"  class="form-control input-md" required="" maxlength="200" >
 
                                     </div>
                                 </div>
                                 
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Kondisi Kutub</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatKutub" name="inBatKutub" type="text"  class="form-control input-md" required="" maxlength="200" >
+
+                                    </div>
+                                </div>      
+                                   
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Tegangan Cell (Volt)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatTegCell" name="inBatTegCell" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                   
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Tegangan Bank (Volt)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inBatTegBank" name="inBatTegVolt" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                                                  
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Keterangan</label>  
+                                    <div class="col-md-6">
+                                        <textarea id="inBatKet" name="inBatKet" class="form-control input-md" required="" maxlength="500" ></textarea>
+
+                                    </div>
+                                </div>      
                                 
                             </fieldset>
                         </form>
@@ -508,9 +663,18 @@
                                 
                                 <!-- Text input-->
                                 <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Merk</label>  
+                                    <div class="col-md-6">
+                                        <input id="inACMerk" name="inACMerk" type="text"  class="form-control input-md" required="" maxlength="200" >
+
+                                    </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Type</label>  
                                     <div class="col-md-6">
-                                        <input id="inACType" name="textinput" type="text"  class="form-control input-md" required="" maxlength="200" >
+                                        <input id="inACType" name="inACType" type="text"  class="form-control input-md" required="" maxlength="200" >
 
                                     </div>
                                 </div>
@@ -519,19 +683,64 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textinput">Kapasitas (PK)</label>  
                                     <div class="col-md-6">
-                                        <input id="inACKap" name="textinput" type="number"  class="form-control input-md" required="" max="999.99" min="0" step="0.01" >
+                                        <input id="inACKap" name="inACKap" type="number"  class="form-control input-md" required="" max="999.99" min="0" step="0.01" >
 
                                     </div>
                                 </div>
                                  
                                  <!-- Text input-->
                                 <div class="form-group">
-                                    <label class="col-md-4 control-label" for="textinput">Jumlah</label>  
+                                    <label class="col-md-4 control-label" for="textinput">Kondisi Freon (psi)</label>  
                                     <div class="col-md-6">
-                                        <input id="inACJumlah" name="textinput" type="number"  class="form-control input-md" required="" max="9999" min="0" step="1" >
+                                        <input id="inACFreon" name="inACFreon" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
 
                                     </div>
                                 </div>
+                                 
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Tegangan Total </label>  
+                                    <div class="col-md-6">
+                                        <input id="inACTegTo" name="inACTegTo" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                   
+                                  <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Arus Total </label>  
+                                    <div class="col-md-6">
+                                        <input id="inACArusTo" name="inACArusTo" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>                                     
+                                
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Temperatur (&deg;C) </label>  
+                                    <div class="col-md-6">
+                                        <input id="inACTemp" name="inACTemp" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>   
+                                   
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Kelembapan </label>  
+                                    <div class="col-md-6">
+                                        <input id="inACKlbm" name="inACKlbm" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>  
+                                   
+                                   <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Keterangan </label>  
+                                    <div class="col-md-6">
+                                        <textarea id="inACKet" name="inACKet"  class="form-control input-md" required=""  ></textarea>
+
+                                    </div>
+                                </div>      
                                 
                                 
                             </fieldset>
@@ -548,6 +757,62 @@
             <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
+        
+          <!-- Modal -->
+        <div class="modal fade" id="modalGround" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Grounding</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="formGround">
+                            <fieldset>
+                                <input type="hidden" id="idGround">
+                                
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Grounding</label>  
+                                    <div class="col-md-6">
+                                        <input id="inGroundName" name="inGroundName" type="text"  class="form-control input-md" required="" maxlength="200" >
+
+                                    </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Tahanan (Ohm)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inGroundTahan" name="inGroundTahan" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                
+                                 <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="textinput">Beda Potensial (Volt AC/DC)</label>  
+                                    <div class="col-md-6">
+                                        <input id="inGroundBeda" name="inGroundBeda" type="number"  class="form-control input-md" required="" max="9999.99" min="0" step="0.01" >
+
+                                    </div>
+                                </div>
+                                 
+                                
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnAddGround" type="button" class="btn btn-success">Tambah</button>
+                        <button id="btnEditGround" type="button" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
         <!--jquery here-->
         <jsp:include page="../share/javascript.jsp"/>
@@ -557,6 +822,7 @@
         <script src="js/urusRectifier.js"></script>
         <script src="js/urusBattery.js"></script>
         <script src="js/urusAircond.js"></script>
+        <script src="js/urusGround.js"></script>
 
         <script>
             var globalDialog = createLoadingDialog(null);
@@ -574,6 +840,7 @@
                     loadRectifier(name);
                     loadBattery(name);
                     loadAircond(name);
+                    loadGround(name);
 
                 });
 
